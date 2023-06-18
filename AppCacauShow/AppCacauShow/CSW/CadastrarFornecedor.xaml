@@ -565,7 +565,7 @@
 
             </Grid>
 
-            <Label Content="Cadastrar Funcionário" Margin="410,19,56,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="40" Height="70" Width="NaN"/>
+            <Label Content="Cadastrar Funcionário" Margin="426,19,40,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="40" Height="70" Width="NaN"/>
             <TextBox HorizontalAlignment="Left" Margin="145,109,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="555" Height="45"/>
             <Label Content="Função:" HorizontalAlignment="Left" Margin="740,71,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" RenderTransformOrigin="1.074,2.556"/>
             <Label Content="E-mail:" HorizontalAlignment="Left" Margin="135,264,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
