@@ -565,36 +565,29 @@
 
             </Grid>
 
-            <Label Content="Cadastrar Funcionário" Margin="426,19,40,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="40" Height="70" Width="NaN"/>
-            <TextBox HorizontalAlignment="Left" Margin="145,109,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="555" Height="45"/>
-            <Label Content="Função:" HorizontalAlignment="Left" Margin="740,71,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" RenderTransformOrigin="1.074,2.556"/>
-            <Label Content="E-mail:" HorizontalAlignment="Left" Margin="135,264,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
-            <Label Content="Contato:" HorizontalAlignment="Left" Margin="796,166,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
-            <Label Content="CPF:" HorizontalAlignment="Left" Margin="138,166,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" RenderTransformOrigin="-0.485,0.774"/>
-            <Label Content="RG:" HorizontalAlignment="Left" Margin="553,166,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" RenderTransformOrigin="1.549,-0.61"/>
-            <Label Content="Data de Nascimento:" HorizontalAlignment="Left" Margin="740,266,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" RenderTransformOrigin="0.853,1.18"/>
-            <TextBox HorizontalAlignment="Left" Margin="145,204,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="375" Height="45"/>
-            <TextBox HorizontalAlignment="Left" Margin="560,204,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="210" Height="45"/>
-            <TextBox HorizontalAlignment="Left" Margin="140,304,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="570" Height="45"/>
-            <TextBox HorizontalAlignment="Left" Margin="800,204,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="355" Height="45" />
-            <DatePicker HorizontalAlignment="Left" Margin="745,304,0,0" VerticalAlignment="Top" Height="45" Width="280" FontSize="25"/>
-            <Label Content="Endereço:" HorizontalAlignment="Left" Margin="132,366,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
-            <TextBox HorizontalAlignment="Left" Margin="140,404,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="700" Height="45" />
-            <Label Content="Nome:" HorizontalAlignment="Left" Margin="140,71,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
-            <TextBox HorizontalAlignment="Left" Margin="745,109,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="410" Height="45"/>
-            <Button HorizontalAlignment="Left" Margin="810,639,0,0" VerticalAlignment="Top" Height="75" Width="155" BorderBrush="Black" FontSize="35" Content="Cancelar" RenderTransformOrigin="0.667,-0.999"/>
-            <Label Content="CEP:" HorizontalAlignment="Left" Margin="865,366,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
-            <TextBox HorizontalAlignment="Left" Margin="870,404,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="285" Height="45" />
-            <Label Content="Bairro:" HorizontalAlignment="Left" Margin="132,469,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
-            <TextBox HorizontalAlignment="Left" Margin="140,509,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="365" Height="45" />
-            <Label Content="UF:" HorizontalAlignment="Left" Margin="529,471,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
-            <TextBox HorizontalAlignment="Left" Margin="535,509,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="265" Height="45" />
-            <Label Content="Cidade:" HorizontalAlignment="Left" Margin="860,471,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
-            <TextBox HorizontalAlignment="Left" Margin="535,509,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="290" Height="45" />
-            <TextBox HorizontalAlignment="Left" Margin="865,509,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="290" Height="45" />
-            <Button HorizontalAlignment="Left" Margin="1015,639,0,0" VerticalAlignment="Top" Height="75" Width="155" BorderBrush="Black" RenderTransformOrigin="0.667,-0.999" FontSize="35" Content="Salvar"/>
+            <Label Content="Cadastrar Fornecedor" Margin="411,39,55,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="40" Height="70" Width="NaN"/>
+            <TextBox HorizontalAlignment="Left" Margin="135,164,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="573" Height="45"/>
+            <Label Content="Cnpj:" HorizontalAlignment="Left" Margin="739,114,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" RenderTransformOrigin="1.074,2.556"/>
+            <Label Content="E-mail:" HorizontalAlignment="Left" Margin="136,229,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
+            <Label Content="Contato:" HorizontalAlignment="Left" Margin="726,219,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" RenderTransformOrigin="1,0.417"/>
+            <TextBox HorizontalAlignment="Left" Margin="140,269,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="520" Height="45" TextChanged="TextBox_TextChanged"/>
+            <TextBox HorizontalAlignment="Left" Margin="730,264,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="430" Height="45" />
+            <Label Content="Endereço:" HorizontalAlignment="Left" Margin="135,334,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" RenderTransformOrigin="0.932,0.533"/>
+            <TextBox HorizontalAlignment="Left" Margin="140,379,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="680" Height="45" />
+            <Label Content="Nome:" HorizontalAlignment="Left" Margin="132,121,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
+            <TextBox HorizontalAlignment="Left" Margin="745,159,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="415" Height="45"/>
+            <Label Content="CEP:" HorizontalAlignment="Left" Margin="862,339,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
+            <TextBox HorizontalAlignment="Left" Margin="865,379,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="295" Height="45" />
+            <Label Content="Bairro:" HorizontalAlignment="Left" Margin="134,451,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
+            <TextBox HorizontalAlignment="Left" Margin="140,489,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="390" Height="45" />
+            <Label Content="UF:" HorizontalAlignment="Left" Margin="585,451,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" RenderTransformOrigin="1.027,0.417"/>
+            <Label Content="Cidade:" HorizontalAlignment="Left" Margin="888,451,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
+            <TextBox HorizontalAlignment="Left" Margin="590,489,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="265" Height="45" />
+            <TextBox HorizontalAlignment="Left" Margin="895,489,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="265" Height="45" />
+            <Button HorizontalAlignment="Left" Margin="1020,639,0,0" VerticalAlignment="Top" Height="75" Width="155" BorderBrush="Black" RenderTransformOrigin="0.667,-0.999" FontSize="35" Content="Salvar"/>
 
         </Grid>
+        <Button HorizontalAlignment="Left" Margin="810,639,0,0" VerticalAlignment="Top" Height="75" Width="155" BorderBrush="Black" FontSize="35" Content="Cancelar" RenderTransformOrigin="0.667,-0.999"/>
 
 
 
@@ -602,3 +595,4 @@
 
     </Grid>
 </Window>
+
