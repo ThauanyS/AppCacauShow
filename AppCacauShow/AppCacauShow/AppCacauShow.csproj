@@ -71,6 +71,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CSW\ConsultarFornecedores.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CSW\ConsultarFuncionarios.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -102,6 +106,9 @@
     </Compile>
     <Compile Include="CSW\CadastrarProdutos.xaml.cs">
       <DependentUpon>CadastrarProdutos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSW\ConsultarFornecedores.xaml.cs">
+      <DependentUpon>ConsultarFornecedores.xaml</DependentUpon>
     </Compile>
     <Compile Include="CSW\ConsultarFuncionarios.xaml.cs">
       <DependentUpon>ConsultarFuncionarios.xaml</DependentUpon>
@@ -201,6 +208,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagens\func.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\fornec.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
