@@ -55,6 +55,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="CSW\CadastrarCompra.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSW\CadastrarFornecedor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSW\CadastrarFuncionario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSW\CadastrarProdutos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSW\Estoque.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CSW\RealizarVenda.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -66,6 +86,21 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CSW\CadastrarCompra.xaml.cs">
+      <DependentUpon>CadastrarCompra.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSW\CadastrarFornecedor.xaml.cs">
+      <DependentUpon>CadastrarFornecedor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSW\CadastrarFuncionario.xaml.cs">
+      <DependentUpon>CadastrarFuncionario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSW\CadastrarProdutos.xaml.cs">
+      <DependentUpon>CadastrarProdutos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSW\Estoque.xaml.cs">
+      <DependentUpon>Estoque.xaml</DependentUpon>
     </Compile>
     <Compile Include="CSW\RealizarVenda.xaml.cs">
       <DependentUpon>RealizarVenda.xaml</DependentUpon>
@@ -136,6 +171,24 @@
     <Resource Include="Imagens\tgBtn_MouseOver.png" />
     <Resource Include="Imagens\vendaimg.png" />
     <Resource Include="Imagens\verificado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\adicionar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\sair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\fluxo-de-caixa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\fornecedor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\adicionar-produto.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
