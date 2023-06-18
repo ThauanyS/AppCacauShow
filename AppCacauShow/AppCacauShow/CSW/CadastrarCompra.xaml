@@ -5,8 +5,1280 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppCacauShow.CSW"
         mc:Ignorable="d"
-        Title="CadastrarCompra" Height="450" Width="800">
+        Title="CadastrarCompra" Height="750" 
+        Width="1200"
+        Topmost="True"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow">
+
+
+
+    <Window.Resources>
+
+
+        <!--// Tooltip Style Template //-->
+
+        <Style TargetType="ToolTip" x:Key="tt_style">
+
+            <Setter Property="Placement" Value="Right"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Margin" Value="20,0,0,0"/>
+            <Setter Property="Background" Value="#4A5668"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="Fonts/Roboto-Light.ttf #Roboto"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="PlacementRectangle" Value="60,0,0,0"/>
+            <Setter Property="HorizontalOffset" Value="15"/>
+            <Setter Property="VerticalOffset" Value="6"/>
+            <Setter Property="HasDropShadow" Value="True"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+
+        </Style>
+
+
+    </Window.Resources>
+
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Grid  Background="#FF131725" Grid.ColumnSpan="2" Margin="0,0,0,-5" Grid.RowSpan="3">
+
+            <Label Content="Realizar Venda" Margin="470,9,440,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial                    " FontSize="40" Height="70" Width="NaN"/>
+            <Button HorizontalAlignment="Left" Margin="555,539,0,0" VerticalAlignment="Top" Height="55" Width="130" BorderBrush="Black" FontSize="25" Content="Cancelar" RenderTransformOrigin="0.667,-0.999">
+            </Button>
+            <TextBox FontSize="20" HorizontalAlignment="Left" Margin="990,204,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="140" Height="45" RenderTransformOrigin="0.5,0.5" />
+            <Label Content="Data:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="140,66,0,0"  Width="277">
+
+
+            </Label>
+
+            <Grid   x:Name="nav_pnl"
+            HorizontalAlignment="Left"
+            Width="65"
+            Background="#2E333A" Margin="0,0,0,5">
+
+                <StackPanel x:Name="st_pnl" Margin="0,-5,0,5">
+
+                    <!--// Icon Menu //-->
+
+
+                    <Image HorizontalAlignment="Left" Height="90" Margin="7,19,0,0" VerticalAlignment="Top" Width="50" Source="/Imagens/layout.png"/>
+
+
+                    <!--// Stack panel with buttons //-->
+
+                    <StackPanel  x:Name="LV"
+                    Background="Transparent">
+
+                        <!--// Home //-->
+
+                        <Button x:Name="Estoque"   Background="{x:Null}" BorderBrush="{x:Null}" Click="Estoque_Click"
+                                      >
+
+                            <!--// Tooltip //-->
+
+                            <Button.ToolTip>
+
+                                <ToolTip x:Name="tt_estoque"
+                                Content="Estoque"
+                                Style="{StaticResource tt_style}"/>
+
+                            </Button.ToolTip>
+
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+
+                                    <Setter Property="Template">
+
+                                        <Setter.Value>
+
+                                            <ControlTemplate TargetType="{x:Type Button}">
+
+                                                <Border x:Name="Bd"
+                                                Height="50"
+                                                BorderBrush="{TemplateBinding BorderBrush}"
+                                                BorderThickness="{TemplateBinding BorderThickness}"
+                                                Background="{TemplateBinding Background}"
+                                                Padding="{TemplateBinding Padding}"
+                                                SnapsToDevicePixels="True">
+
+                                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+
+                                                </Border>
+
+                                                <ControlTemplate.Triggers>
+
+                                                    <MultiTrigger>
+
+                                                        <MultiTrigger.Conditions>
+
+                                                            <Condition Property="IsMouseOver" Value="True"/>
+
+                                                        </MultiTrigger.Conditions>
+
+                                                        <Setter Property="Background"
+                                                        TargetName="Bd"
+                                                        Value="#404D5B"/>
+
+                                                        <Setter Property="BorderBrush"
+                                                        TargetName="Bd"
+                                                        Value="#404D5B"/>
+
+                                                    </MultiTrigger>
+
+                                                </ControlTemplate.Triggers>
+
+                                            </ControlTemplate>
+
+                                        </Setter.Value>
+
+                                    </Setter>
+
+                                </Style>
+                            </Button.Style>
+
+                            <!-- Estoque Icon   -->
+
+
+                            <Image Source="/Imagens/estoque-pronto.png"
+                            Stretch="Uniform" Width="58" Height="39"
+                                       />
+
+                        </Button>
+
+
+
+
+                        <!--Button Vendas-->
+
+                        <Button x:Name="Vendas"  Background="{x:Null}" BorderBrush="{x:Null}" Click="Vendas_Click"
+                                      >
+
+                            <!--// Tooltip //-->
+
+                            <Button.ToolTip >
+
+                                <ToolTip x:Name="tt_vendas"
+                                Content="Vendas"
+                                Style="{StaticResource tt_style}"/>
+
+                            </Button.ToolTip>
+
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+
+                                    <Setter Property="Template">
+
+                                        <Setter.Value>
+
+                                            <ControlTemplate TargetType="{x:Type Button}">
+
+                                                <Border x:Name="Bd"
+                                                Height="50"
+                                                BorderBrush="{TemplateBinding BorderBrush}"
+                                                BorderThickness="{TemplateBinding BorderThickness}"
+                                                Background="{TemplateBinding Background}"
+                                                Padding="{TemplateBinding Padding}"
+                                                SnapsToDevicePixels="True">
+
+                                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+
+                                                </Border>
+
+                                                <ControlTemplate.Triggers>
+
+                                                    <MultiTrigger>
+
+                                                        <MultiTrigger.Conditions>
+
+                                                            <Condition Property="IsMouseOver" Value="True"/>
+
+                                                        </MultiTrigger.Conditions>
+
+                                                        <Setter Property="Background"
+                                                        TargetName="Bd"
+                                                        Value="#404D5B"/>
+
+                                                        <Setter Property="BorderBrush"
+                                                        TargetName="Bd"
+                                                        Value="#404D5B"/>
+
+                                                    </MultiTrigger>
+
+                                                </ControlTemplate.Triggers>
+
+                                            </ControlTemplate>
+
+                                        </Setter.Value>
+
+                                    </Setter>
+
+                                </Style>
+                            </Button.Style>
+
+                            <!--Vendas icon-->
+
+                            <Image Source="/Imagens/vendaimg.png"
+                            Stretch="Uniform"
+                            Width="61" Height="39" Margin="0,0,0,5"
+                                />
+
+
+                        </Button>
+
+
+                        <!--// Button Compras //-->
+                        <Button x:Name="Compras"  Background="{x:Null}" BorderBrush="{x:Null}" Height="50" Click="Compras_Click"
+                                      >
+
+                            <!--// Tooltip //-->
+
+                            <Button.ToolTip>
+
+                                <ToolTip x:Name="tt_compras"
+                                Content="Compras"
+                                Style="{StaticResource tt_style}"/>
+
+                            </Button.ToolTip>
+
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+
+                                    <Setter Property="Template">
+
+                                        <Setter.Value>
+
+                                            <ControlTemplate TargetType="{x:Type Button}">
+
+                                                <Border x:Name="Bd"
+                                                Height="50"
+                                                BorderBrush="{TemplateBinding BorderBrush}"
+                                                BorderThickness="{TemplateBinding BorderThickness}"
+                                                Background="{TemplateBinding Background}"
+                                                Padding="{TemplateBinding Padding}"
+                                                SnapsToDevicePixels="True">
+
+                                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+
+                                                </Border>
+
+                                                <ControlTemplate.Triggers>
+
+                                                    <MultiTrigger>
+
+                                                        <MultiTrigger.Conditions>
+
+                                                            <Condition Property="IsMouseOver" Value="True"/>
+
+                                                        </MultiTrigger.Conditions>
+
+                                                        <Setter Property="Background"
+                                                        TargetName="Bd"
+                                                        Value="#404D5B"/>
+
+                                                        <Setter Property="BorderBrush"
+                                                        TargetName="Bd"
+                                                        Value="#404D5B"/>
+
+                                                    </MultiTrigger>
+
+                                                </ControlTemplate.Triggers>
+
+                                            </ControlTemplate>
+
+                                        </Setter.Value>
+
+                                    </Setter>
+
+                                </Style>
+                            </Button.Style>
+
+
+                            <!--Compras icon-->
+                            <Image Source="/Imagens/compra.png"
+                            Width="70" Height="43" Margin="10,0,0,0"/>
+
+                        </Button>
+
+                        <!--Button Funcionários-->
+                        <Button x:Name="Funcionarios"  
+                        Background="{x:Null}" 
+                        BorderBrush="{x:Null}"
+                        Height="49" Click="Funcionarios_Click">
+
+
+                            <!--// Tooltip //-->
+
+                            <Button.ToolTip>
+
+                                <ToolTip x:Name="tt_funcionario"
+                                Content="Funcionários"
+                                Style="{StaticResource tt_style}"/>
+
+                            </Button.ToolTip>
+
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+
+                                    <Setter Property="Template">
+
+                                        <Setter.Value>
+
+                                            <ControlTemplate TargetType="{x:Type Button}">
+
+                                                <Border x:Name="Bd"
+                                                Height="50"
+                                                BorderBrush="{TemplateBinding BorderBrush}"
+                                                BorderThickness="{TemplateBinding BorderThickness}"
+                                                Background="{TemplateBinding Background}"
+                                                Padding="{TemplateBinding Padding}"
+                                                SnapsToDevicePixels="True">
+
+                                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+
+                                                </Border>
+
+                                                <ControlTemplate.Triggers>
+
+                                                    <MultiTrigger>
+
+                                                        <MultiTrigger.Conditions>
+
+                                                            <Condition Property="IsMouseOver" Value="True"/>
+
+                                                        </MultiTrigger.Conditions>
+
+                                                        <Setter Property="Background"
+                                                        TargetName="Bd"
+                                                        Value="#404D5B"/>
+
+                                                        <Setter Property="BorderBrush"
+                                                        TargetName="Bd"
+                                                        Value="#404D5B"/>
+
+                                                    </MultiTrigger>
+
+                                                </ControlTemplate.Triggers>
+
+                                            </ControlTemplate>
+
+                                        </Setter.Value>
+
+                                    </Setter>
+
+                                </Style>
+                            </Button.Style>
+
+                            <!--Funcionários Icon-->
+
+                            <Image Source="/Imagens/func.png"
+                            Width="60" Height="45"/>
+
+
+
+                        </Button>
+
+
+                        <!--// Button Sair //-->
+                        <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click" 
+                                      >
+
+                            <!--// Tooltip //-->
+
+                            <Button.ToolTip>
+
+                                <ToolTip x:Name="tt_sair"
+                                Content="Sair"
+                                Style="{StaticResource tt_style}"/>
+
+                            </Button.ToolTip>
+
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+
+                                    <Setter Property="Template">
+
+                                        <Setter.Value>
+
+                                            <ControlTemplate TargetType="{x:Type Button}">
+
+                                                <Border x:Name="Bd"
+                                                Height="50"
+                                                BorderBrush="{TemplateBinding BorderBrush}"
+                                                BorderThickness="{TemplateBinding BorderThickness}"
+                                                Background="{TemplateBinding Background}"
+                                                Padding="{TemplateBinding Padding}"
+                                                SnapsToDevicePixels="True">
+
+                                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+
+                                                </Border>
+
+                                                <ControlTemplate.Triggers>
+
+                                                    <MultiTrigger>
+
+                                                        <MultiTrigger.Conditions>
+
+                                                            <Condition Property="IsMouseOver" Value="True"/>
+
+                                                        </MultiTrigger.Conditions>
+
+                                                        <Setter Property="Background"
+                                                        TargetName="Bd"
+                                                        Value="#404D5B"/>
+
+                                                        <Setter Property="BorderBrush"
+                                                        TargetName="Bd"
+                                                        Value="#404D5B"/>
+
+                                                    </MultiTrigger>
+
+                                                </ControlTemplate.Triggers>
+
+                                            </ControlTemplate>
+
+                                        </Setter.Value>
+
+                                    </Setter>
+
+                                </Style>
+                            </Button.Style>
+
+                            <!--Sair-->
+
+                            <Image Source="/Imagens/img_signout.png"
+                            Stretch="None"
+                            Height="48" Width="60"/>
+
+
+                        </Button>
+
+
+
+                    </StackPanel>
+
+                </StackPanel>
+
+
+            </Grid>
+            <Button HorizontalAlignment="Left" Margin="730,539,0,0" VerticalAlignment="Top" Height="55" Width="130" BorderBrush="Black" RenderTransformOrigin="0.667,-0.999" FontSize="25" Content="Salvar">
+
+            </Button>
+           
+            <Button  HorizontalAlignment="Left" Margin="485,449,0,0" VerticalAlignment="Top" Height="65" Width="95" FontSize="25" BorderBrush="{x:Null}" Content="Novo" />
+            <TextBox HorizontalAlignment="Left" Margin="145,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Height="45"/>
+            <Label Content="Valor:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="324,414,0,0" RenderTransformOrigin="0.5,0.5" Width="277">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label Content="Parcela:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="847,166,0,0" RenderTransformOrigin="0.5,0.5" Width="277">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label Content="Forma de Pagamento:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="549,166,0,0" RenderTransformOrigin="0.5,0.5" Width="277">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label Content="Desconto" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="604,454,0,0" RenderTransformOrigin="0.5,0.5" Width="277">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label Content="Hora:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="443,66,0,0" RenderTransformOrigin="0.5,0.5" Width="277">
+
+            </Label>
+            <Label Content="Vendedor:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="704,66,0,0" RenderTransformOrigin="0.5,0.5" Width="277">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label Content="Cliente:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="140,166,0,0" RenderTransformOrigin="0.5,0.5" Width="277">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label Content="Produto:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="140,265,0,0" RenderTransformOrigin="0.5,0.5" Width="277">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label Content="Valor Unit." HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="664,265,0,0" RenderTransformOrigin="0.5,0.5" Width="277">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label Content="Quant:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="834,265,0,0" RenderTransformOrigin="0.5,0.5" Width="277">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label Content="Valor Item" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="959,265,0,0" RenderTransformOrigin="0.5,0.5" Width="277">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label Content="Valor Total" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="469,406,0,0" RenderTransformOrigin="0.5,0.5" Width="277">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <TextBox HorizontalAlignment="Left" Margin="450,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185" Height="45"/>
+            <ComboBox HorizontalAlignment="Left" Margin="715,104,0,0" VerticalAlignment="Top" Width="435" Height="45"/>
+            <ComboBox HorizontalAlignment="Left" Margin="145,204,0,0" VerticalAlignment="Top" Width="370" Height="45"/>
+            <ComboBox HorizontalAlignment="Left" Margin="555,204,0,0" VerticalAlignment="Top" Width="260" Height="45"/>
+            <ComboBox HorizontalAlignment="Left" Margin="855,204,0,0" VerticalAlignment="Top" Width="100" Height="45"/>
+            <Label Content="Valor Parcela:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="979,166,0,0" RenderTransformOrigin="0.5,0.5" Width="277">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <ComboBox HorizontalAlignment="Left" Margin="145,304,0,0" VerticalAlignment="Top" Width="470" Height="45"/>
+            <TextBox HorizontalAlignment="Left" Margin="675,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="45"/>
+
+        </Grid>
+        <Button  HorizontalAlignment="Left" FontSize="25" Content="Excluir" Margin="815,479,0,0" VerticalAlignment="Top" Height="55" Width="130"  BorderBrush="{x:Null}" Grid.ColumnSpan="2" Grid.RowSpan="2" >
+
+        </Button>
+        <Grid  Background="#FF131725" Grid.ColumnSpan="2" Margin="0,0,0,-5" Grid.RowSpan="3">
+
+            <Label Content="Cadastrar Compra" Margin="455,19,400,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial                    " FontSize="40" Height="70" Width="NaN"/>
+            <Button HorizontalAlignment="Left" Margin="810,639,0,0" VerticalAlignment="Top" Height="75" Width="155" BorderBrush="Black" FontSize="35" Content="Cancelar" RenderTransformOrigin="0.667,-0.999"/>
+            <TextBox FontSize="20" HorizontalAlignment="Left" Margin="1025,204,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="140" Height="45" RenderTransformOrigin="0.5,0.5" />
+            <Label Content="Data:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="140,66,0,0"  Width="277"/>
+
+            <Grid   x:Name="nav_pnl1"
+                HorizontalAlignment="Left"
+                Width="100"
+                Background="#2E333A" Margin="0,0,0,5">
+
+                <StackPanel x:Name="st_pnl1" Margin="0,5,0,5">
+
+                    <!--// Icon Menu //-->
+
+
+                    <!--// Stack panel with buttons //-->
+
+                    <!--// Icon Menu //-->
+
+
+                    <Image Height="90" Width="70" Source="/Imagens/layout.png"/>
+
+
+                    <!--// Stack panel with buttons //-->
+
+                    <StackPanel  x:Name="LV1"
+                        Background="Transparent">
+
+                        <!--// Home //-->
+
+                        <Button x:Name="Estoque1"   Background="{x:Null}" BorderBrush="{x:Null}" Click="Estoque_Click" Height="90"
+                                      >
+
+                            <!--// Tooltip //-->
+
+                            <Button.ToolTip>
+
+                                <ToolTip x:Name="tt_estoque1"
+                                    Content="Estoque"
+                                    Style="{StaticResource tt_style}"/>
+
+                            </Button.ToolTip>
+
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+
+                                    <Setter Property="Template">
+
+                                        <Setter.Value>
+
+                                            <ControlTemplate TargetType="{x:Type Button}">
+
+                                                <Border x:Name="Bd"
+                                                    Height="90"
+                                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                                    Background="{TemplateBinding Background}"
+                                                    Padding="{TemplateBinding Padding}"
+                                                    SnapsToDevicePixels="True">
+
+                                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+
+                                                </Border>
+
+                                                <ControlTemplate.Triggers>
+
+                                                    <MultiTrigger>
+
+                                                        <MultiTrigger.Conditions>
+
+                                                            <Condition Property="IsMouseOver" Value="True"/>
+
+                                                        </MultiTrigger.Conditions>
+
+                                                        <Setter Property="Background"
+                                                            TargetName="Bd"
+                                                            Value="#404D5B"/>
+
+                                                        <Setter Property="BorderBrush"
+                                                            TargetName="Bd"
+                                                            Value="#404D5B"/>
+
+                                                    </MultiTrigger>
+
+                                                </ControlTemplate.Triggers>
+
+                                            </ControlTemplate>
+
+                                        </Setter.Value>
+
+                                    </Setter>
+
+                                </Style>
+                            </Button.Style>
+
+                            <!-- Estoque Icon   -->
+
+
+                            <Image Source="/Imagens/estoque-pronto.png"
+                                Stretch="Uniform" Width="84" Height="74"
+                                       />
+
+                        </Button>
+
+
+
+
+                        <!--Button Vendas-->
+
+                        <Button x:Name="Vendas1"  Background="{x:Null}" BorderBrush="{x:Null}" Click="Vendas_Click" Height="90"
+                                      >
+
+                            <!--// Tooltip //-->
+
+                            <Button.ToolTip>
+
+                                <ToolTip x:Name="tt_vendas1"
+                                    Content="Vendas"
+                                    Style="{StaticResource tt_style}"/>
+
+                            </Button.ToolTip>
+
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+
+                                    <Setter Property="Template">
+
+                                        <Setter.Value>
+
+                                            <ControlTemplate TargetType="{x:Type Button}">
+
+                                                <Border x:Name="Bd"
+                                                    Height="90"
+                                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                                    Background="{TemplateBinding Background}"
+                                                    Padding="{TemplateBinding Padding}"
+                                                    SnapsToDevicePixels="True">
+
+                                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+
+                                                </Border>
+
+                                                <ControlTemplate.Triggers>
+
+                                                    <MultiTrigger>
+
+                                                        <MultiTrigger.Conditions>
+
+                                                            <Condition Property="IsMouseOver" Value="True"/>
+
+                                                        </MultiTrigger.Conditions>
+
+                                                        <Setter Property="Background"
+                                                            TargetName="Bd"
+                                                            Value="#404D5B"/>
+
+                                                        <Setter Property="BorderBrush"
+                                                            TargetName="Bd"
+                                                            Value="#404D5B"/>
+
+                                                    </MultiTrigger>
+
+                                                </ControlTemplate.Triggers>
+
+                                            </ControlTemplate>
+
+                                        </Setter.Value>
+
+                                    </Setter>
+
+                                </Style>
+                            </Button.Style>
+
+                            <!--Vendas icon-->
+
+                            <Image Source="/Imagens/vendaimg.png"
+                                Stretch="Uniform"
+                                Width="80" Height="65"
+                                />
+
+
+                        </Button>
+
+
+                        <!--// Button Compras //-->
+                        <Button x:Name="Compras1"  Background="{x:Null}" BorderBrush="{x:Null}" Height="90" Click="Compras_Click"
+                                      >
+
+                            <!--// Tooltip //-->
+
+                            <Button.ToolTip>
+
+                                <ToolTip x:Name="tt_compras1"
+                                    Content="Compras"
+                                    Style="{StaticResource tt_style}"/>
+
+                            </Button.ToolTip>
+
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+
+                                    <Setter Property="Template">
+
+                                        <Setter.Value>
+
+                                            <ControlTemplate TargetType="{x:Type Button}">
+
+                                                <Border x:Name="Bd"
+                                                    Height="90"
+                                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                                    Background="{TemplateBinding Background}"
+                                                    Padding="{TemplateBinding Padding}"
+                                                    SnapsToDevicePixels="True">
+
+                                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+
+                                                </Border>
+
+                                                <ControlTemplate.Triggers>
+
+                                                    <MultiTrigger>
+
+                                                        <MultiTrigger.Conditions>
+
+                                                            <Condition Property="IsMouseOver" Value="True"/>
+
+                                                        </MultiTrigger.Conditions>
+
+                                                        <Setter Property="Background"
+                                                            TargetName="Bd"
+                                                            Value="#404D5B"/>
+
+                                                        <Setter Property="BorderBrush"
+                                                            TargetName="Bd"
+                                                            Value="#404D5B"/>
+
+                                                    </MultiTrigger>
+
+                                                </ControlTemplate.Triggers>
+
+                                            </ControlTemplate>
+
+                                        </Setter.Value>
+
+                                    </Setter>
+
+                                </Style>
+                            </Button.Style>
+
+
+                            <!--Compras icon-->
+                            <Image Source="/Imagens/compra.png"
+                                Width="84" Height="74" Margin="10,0,0,0"/>
+
+                        </Button>
+
+                        <!--Button Funcionários-->
+                        <Button x:Name="Funcionarios1"  
+                            Background="{x:Null}" 
+                            BorderBrush="{x:Null}"
+                            Height="90" Click="Funcionarios_Click">
+
+
+                            <!--// Tooltip //-->
+
+                            <Button.ToolTip>
+
+                                <ToolTip x:Name="tt_funcionario1"
+                                    Content="Funcionários"
+                                    Style="{StaticResource tt_style}"/>
+
+                            </Button.ToolTip>
+
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+
+                                    <Setter Property="Template">
+
+                                        <Setter.Value>
+
+                                            <ControlTemplate TargetType="{x:Type Button}">
+
+                                                <Border x:Name="Bd"
+                                                    Height="90"
+                                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                                    Background="{TemplateBinding Background}"
+                                                    Padding="{TemplateBinding Padding}"
+                                                    SnapsToDevicePixels="True">
+
+                                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+
+                                                </Border>
+
+                                                <ControlTemplate.Triggers>
+
+                                                    <MultiTrigger>
+
+                                                        <MultiTrigger.Conditions>
+
+                                                            <Condition Property="IsMouseOver" Value="True"/>
+
+                                                        </MultiTrigger.Conditions>
+
+                                                        <Setter Property="Background"
+                                                            TargetName="Bd"
+                                                            Value="#404D5B"/>
+
+                                                        <Setter Property="BorderBrush"
+                                                            TargetName="Bd"
+                                                            Value="#404D5B"/>
+
+                                                    </MultiTrigger>
+
+                                                </ControlTemplate.Triggers>
+
+                                            </ControlTemplate>
+
+                                        </Setter.Value>
+
+                                    </Setter>
+
+                                </Style>
+                            </Button.Style>
+
+                            <!--Funcionários Icon-->
+
+                            <Image Source="/Imagens/func.png"
+                                Width="84" Height="74"/>
+
+
+
+                        </Button>
+
+                        <!--Button Caixa-->
+                        <Button x:Name="Caixa"  
+                            Background="{x:Null}" 
+                            BorderBrush="{x:Null}"
+                            Height="90" Click="Caixa_Click">
+
+
+                            <!--// Tooltip //-->
+
+                            <Button.ToolTip>
+
+                                <ToolTip x:Name="tt_Caixa"
+                                    Content="Caixa"
+                                    Style="{StaticResource tt_style}"/>
+
+                            </Button.ToolTip>
+
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+
+                                    <Setter Property="Template">
+
+                                        <Setter.Value>
+
+                                            <ControlTemplate TargetType="{x:Type Button}">
+
+                                                <Border x:Name="Bd"
+                                                    Height="90"
+                                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                                    Background="{TemplateBinding Background}"
+                                                    Padding="{TemplateBinding Padding}"
+                                                    SnapsToDevicePixels="True">
+
+                                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+
+                                                </Border>
+
+                                                <ControlTemplate.Triggers>
+
+                                                    <MultiTrigger>
+
+                                                        <MultiTrigger.Conditions>
+
+                                                            <Condition Property="IsMouseOver" Value="True"/>
+
+                                                        </MultiTrigger.Conditions>
+
+                                                        <Setter Property="Background"
+                                                            TargetName="Bd"
+                                                            Value="#404D5B"/>
+
+                                                        <Setter Property="BorderBrush"
+                                                            TargetName="Bd"
+                                                            Value="#404D5B"/>
+
+                                                    </MultiTrigger>
+
+                                                </ControlTemplate.Triggers>
+
+                                            </ControlTemplate>
+
+                                        </Setter.Value>
+
+                                    </Setter>
+
+                                </Style>
+                            </Button.Style>
+
+                            <!--Funcionários Icon-->
+
+                            <Image Source="/Imagens/fluxo-de-caixa.png"
+                                Width="69" Height="64"/>
+
+
+
+                        </Button>
+
+
+                        <!--// Button Sair //-->
+                        <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click" Height="90" 
+                                      >
+
+                            <!--// Tooltip //-->
+
+                            <Button.ToolTip>
+
+                                <ToolTip x:Name="tt_sair1"
+                                    Content="Sair"
+                                    Style="{StaticResource tt_style}"/>
+
+                            </Button.ToolTip>
+
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+
+                                    <Setter Property="Template">
+
+                                        <Setter.Value>
+
+                                            <ControlTemplate TargetType="{x:Type Button}">
+
+                                                <Border x:Name="Bd"
+                                                    Height="90"
+                                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                                    Background="{TemplateBinding Background}"
+                                                    Padding="{TemplateBinding Padding}"
+                                                    SnapsToDevicePixels="True">
+
+                                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+
+                                                </Border>
+
+                                                <ControlTemplate.Triggers>
+
+                                                    <MultiTrigger>
+
+                                                        <MultiTrigger.Conditions>
+
+                                                            <Condition Property="IsMouseOver" Value="True"/>
+
+                                                        </MultiTrigger.Conditions>
+
+                                                        <Setter Property="Background"
+                                                            TargetName="Bd"
+                                                            Value="#404D5B"/>
+
+                                                        <Setter Property="BorderBrush"
+                                                            TargetName="Bd"
+                                                            Value="#404D5B"/>
+
+                                                    </MultiTrigger>
+
+                                                </ControlTemplate.Triggers>
+
+                                            </ControlTemplate>
+
+                                        </Setter.Value>
+
+                                    </Setter>
+
+                                </Style>
+                            </Button.Style>
+
+                            <!--Sair-->
+
+                            <Image Source="/Imagens/img_signout.png"
+                                Height="70" Width="80"/>
+
+
+                        </Button>
+
+
+
+                    </StackPanel>
+
+                </StackPanel>
+
+
+            </Grid>
+            <Button HorizontalAlignment="Left" Margin="1015,639,0,0" VerticalAlignment="Top" Height="75" Width="155" BorderBrush="Black" RenderTransformOrigin="0.667,-0.999" FontSize="35" Content="Salvar"/>
+            <Button  HorizontalAlignment="Left" Margin="1065,289,0,0" VerticalAlignment="Top" Height="65" Width="100" FontSize="35" BorderBrush="{x:Null}" RenderTransformOrigin="3.358,0.334" >
+                <Image Source="/Imagens/adicionar.png" Height="60" Width="86"/>
+            </Button>
+            <Label Content="Parcela:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="887,166,0,0" RenderTransformOrigin="0.5,0.5" Width="107">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label Content="Forma de Pagamento:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="609,166,0,0" RenderTransformOrigin="0.5,0.5" Width="277">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label Content="Status:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="324,602,0,0" RenderTransformOrigin="0.5,0.5" Width="277">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label Content="Funcionário:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="679,70,0,0" RenderTransformOrigin="0.5,0.5" Width="277">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label Content="Fornecedor:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="240,166,0,0" RenderTransformOrigin="0.5,0.5" Width="277">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label Content="Produto:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="140,265,0,0" RenderTransformOrigin="0.5,0.5" Width="277">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label Content="Valor Unit." HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="630,265,0,0" RenderTransformOrigin="0.5,0.5" Width="137">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label Content="Quant:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="784,265,0,0" RenderTransformOrigin="0.5,0.5" Width="92">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label Content="Valor Item:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="904,265,0,0" RenderTransformOrigin="0.5,0.5" Width="277">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label Content="Valor Total:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="140,602,0,0" RenderTransformOrigin="0.5,0.5" Width="137">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <ComboBox HorizontalAlignment="Left" Margin="685,109,0,0" VerticalAlignment="Top" Width="480" Height="45"/>
+            <ComboBox HorizontalAlignment="Left" Margin="245,204,0,0" VerticalAlignment="Top" Width="350" Height="45"/>
+            <ComboBox HorizontalAlignment="Left" Margin="615,204,0,0" VerticalAlignment="Top" Width="255" Height="45" RenderTransformOrigin="0.5,0.5">
+                <ComboBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.429"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ComboBox.RenderTransform>
+            </ComboBox>
+            <ComboBox HorizontalAlignment="Left" Margin="895,204,0,0" VerticalAlignment="Top" Width="100" Height="45"/>
+            <Label Content="Valor Parcela:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="1014,166,0,0" RenderTransformOrigin="0.5,0.5" Width="277">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <ComboBox HorizontalAlignment="Left" Margin="145,304,0,0" VerticalAlignment="Top" Width="470" Height="45"/>
+            <TextBox HorizontalAlignment="Left" Margin="640,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="45"/>
+            <TextBox FontSize="20" HorizontalAlignment="Left" Margin="910,304,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="130" Height="45" RenderTransformOrigin="0.423,0.556" />
+            <TextBox FontSize="20" HorizontalAlignment="Left" Margin="800,304,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="80" Height="45" RenderTransformOrigin="0.5,0.5" />
+            <TextBox FontSize="20" HorizontalAlignment="Left" Margin="145,639,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="140" Height="45" RenderTransformOrigin="0.5,0.5" />
+            <TextBox FontSize="20" HorizontalAlignment="Left" Margin="330,639,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="140" Height="45" RenderTransformOrigin="0.5,0.5" />
+            <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Height="NaN" Margin="145,364,160,135" Width="NaN"/>
+            <Button  HorizontalAlignment="Left" Margin="1050,459,0,0" VerticalAlignment="Top" Height="65" Width="135" FontSize="30" Content="Excluir" BorderBrush="{x:Null}" RenderTransformOrigin="3.358,0.334" >
+
+            </Button>
+            <Button  HorizontalAlignment="Left" Margin="145,179,0,0" VerticalAlignment="Top" Height="70" Width="80" FontSize="35" BorderBrush="{x:Null}" RenderTransformOrigin="3.358,0.334" >
+                <Image Source="/Imagens/fornecedor.png" Height="65" Width="75"/>
+
+            </Button>
+            <DatePicker HorizontalAlignment="Left" Margin="142,109,0,0" FontSize="27" VerticalAlignment="Top" Height="45" Width="293"/>
+
+        </Grid>
     </Grid>
+
 </Window>
