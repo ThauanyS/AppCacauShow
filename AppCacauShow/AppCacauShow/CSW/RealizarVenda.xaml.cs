@@ -24,6 +24,9 @@ namespace AppCacauShow.CSW
             InitializeComponent();
         }
 
+        private void Estoque_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
     }
 }

@@ -62,6 +62,7 @@
 
 
             </Label>
+            <ContentControl x:Name="contentContainer" />
 
             <Grid   x:Name="nav_pnl"
             HorizontalAlignment="Left"

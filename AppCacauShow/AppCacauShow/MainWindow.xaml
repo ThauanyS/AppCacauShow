@@ -24,6 +24,7 @@
                 </TextBox.Background>
             </TextBox>
         </Grid>
+        <ContentControl x:Name="contentContainer" />
 
     </Grid>
 </Window>
