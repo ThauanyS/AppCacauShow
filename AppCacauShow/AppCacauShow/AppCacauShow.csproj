@@ -71,6 +71,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CSW\ConsultarFuncionarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CSW\Estoque.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -98,6 +102,9 @@
     </Compile>
     <Compile Include="CSW\CadastrarProdutos.xaml.cs">
       <DependentUpon>CadastrarProdutos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSW\ConsultarFuncionarios.xaml.cs">
+      <DependentUpon>ConsultarFuncionarios.xaml</DependentUpon>
     </Compile>
     <Compile Include="CSW\Estoque.xaml.cs">
       <DependentUpon>Estoque.xaml</DependentUpon>
@@ -150,7 +157,6 @@
     <Resource Include="Imagens\entregador.png" />
     <Resource Include="Imagens\estoque-pronto.png" />
     <Resource Include="Imagens\excluir.png" />
-    <Resource Include="Imagens\func.png" />
     <Resource Include="Imagens\homeimg.png" />
     <Resource Include="Imagens\img_background.png" />
     <Resource Include="Imagens\img_contact.png" />
@@ -189,6 +195,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagens\adicionar-produto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\cfunc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\func.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
