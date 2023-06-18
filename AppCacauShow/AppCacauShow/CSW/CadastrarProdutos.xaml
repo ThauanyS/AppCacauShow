@@ -67,8 +67,8 @@
 
             <!--// Menu de navegação//-->
             <Label Content="Cód." HorizontalAlignment="Left" Margin="400,226,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
-            <TextBox BorderThickness="1" HorizontalAlignment="Left" Margin="160,159,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="890" Height="45" RenderTransformOrigin="0.5,0.5" FontSize="20" FontFamily="Arial" />
-            <TextBox FontSize="20" HorizontalAlignment="Left" Margin="280,374,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="860" Height="160" RenderTransformOrigin="0.5,0.5" />
+            <TextBox BorderThickness="1" HorizontalAlignment="Left" Margin="160,159,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="980" Height="45" RenderTransformOrigin="0.5,0.5" FontSize="20" FontFamily="Arial" />
+            <TextBox FontSize="20" HorizontalAlignment="Left" Margin="165,374,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="975" Height="160" RenderTransformOrigin="0.5,0.5" />
             <Label Content="Descrição:" HorizontalAlignment="Left" Margin="158,334,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
             <TextBox BorderThickness="1" HorizontalAlignment="Left" Margin="405,264,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="360" Height="45" RenderTransformOrigin="0.5,0.5" FontSize="20" FontFamily="Arial" />
             <TextBox BorderThickness="1" HorizontalAlignment="Left" Margin="160,264,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="170" Height="45" RenderTransformOrigin="0.5,0.5" FontSize="20" FontFamily="Arial" />
