@@ -8,7 +8,7 @@
         Title="CadastrarVendas" Height="750" 
         Width="1200"
         Topmost="True"
-       
+        WindowStartupLocation="CenterScreen"
         WindowStyle="ToolWindow">
 
 
@@ -52,9 +52,7 @@
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
-<ContentControl x:Name="contentControl">
-    <Frame x:Name="contentFrame" NavigationUIVisibility="Hidden"/>
-</ContentControl>
+
 
         <Grid  Background="#FF131725" Grid.ColumnSpan="2" Margin="0,0,0,-5" Grid.RowSpan="3">
 

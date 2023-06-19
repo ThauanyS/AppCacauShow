@@ -24,32 +24,15 @@ namespace AppCacauShow.CSW
             InitializeComponent();
         }
 
-        private Window currentWindow;
-
-        private void OpenWindow(Window newWindow)
-        {
-            if (currentWindow != null)
-            {
-                currentWindow.Hide(); // Ocultar a janela atual em vez de fechá-la
-            }
-
-            currentWindow = newWindow;
-            newWindow.Owner = this; // Definir a janela principal como proprietária da nova janela
-            newWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen; // Definir a posição inicial da janela
-            newWindow.Show();
-        }
-
-
+       
         private void Estoque_Click(object sender, RoutedEventArgs e)
         {
             Estoque estoqueWindow = new Estoque();
-            OpenWindow(estoqueWindow);
         }
 
         private void Vendas_Click(object sender, RoutedEventArgs e)
         {
             RealizarVenda realizarVenda = new RealizarVenda();
-            OpenWindow(realizarVenda);
         }
 
     
