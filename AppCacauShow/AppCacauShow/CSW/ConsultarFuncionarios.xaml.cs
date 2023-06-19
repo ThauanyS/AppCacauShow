@@ -23,5 +23,10 @@ namespace AppCacauShow.CSW
         {
             InitializeComponent();
         }
+
+        private void Caixa_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

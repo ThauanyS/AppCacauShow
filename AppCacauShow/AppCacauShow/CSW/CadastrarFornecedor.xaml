@@ -166,7 +166,7 @@
 
                         <!--Button Vendas-->
 
-                        <Button x:Name="Vendas1"  Background="{x:Null}" BorderBrush="{x:Null}" Click="Vendas_Click" Height="90"
+                        <Button x:Name="Vendas1"  Background="{x:Null}" BorderBrush="{x:Null}"  Height="90"
                                       >
 
                             <!--// Tooltip //-->
@@ -403,7 +403,7 @@
                         <Button x:Name="Caixa"  
                             Background="{x:Null}" 
                             BorderBrush="{x:Null}"
-                            Height="90" Click="Caixa_Click">
+                            Height="90" >
 
 
                             <!--// Tooltip //-->
@@ -481,7 +481,7 @@
 
 
                         <!--// Button Sair //-->
-                        <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click" Height="90" 
+                        <Button Background="{x:Null}" BorderBrush="{x:Null}"  Height="90" 
                                       >
 
                             <!--// Tooltip //-->
@@ -570,7 +570,7 @@
             <Label Content="Cnpj:" HorizontalAlignment="Left" Margin="739,114,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" RenderTransformOrigin="1.074,2.556"/>
             <Label Content="E-mail:" HorizontalAlignment="Left" Margin="136,229,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
             <Label Content="Contato:" HorizontalAlignment="Left" Margin="726,219,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" RenderTransformOrigin="1,0.417"/>
-            <TextBox HorizontalAlignment="Left" Margin="140,269,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="520" Height="45" TextChanged="TextBox_TextChanged"/>
+            <TextBox HorizontalAlignment="Left" Margin="140,269,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="520" Height="45"/>
             <TextBox HorizontalAlignment="Left" Margin="730,264,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="430" Height="45" />
             <Label Content="Endereço:" HorizontalAlignment="Left" Margin="135,334,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" RenderTransformOrigin="0.932,0.533"/>
             <TextBox HorizontalAlignment="Left" Margin="140,379,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="680" Height="45" />

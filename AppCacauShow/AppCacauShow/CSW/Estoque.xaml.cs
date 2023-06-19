@@ -23,5 +23,20 @@ namespace AppCacauShow.CSW
         {
             InitializeComponent();
         }
+
+        private void Estoque_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Funcionarios_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Caixa_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -26,6 +26,12 @@ namespace AppCacauShow.CSW
 
         private void Estoque_Click(object sender, RoutedEventArgs e)
         {
+            contentContainer.Content = new Estoque();
+        }
+
+        private void Vendas_Click(object sender, RoutedEventArgs e)
+        {
+            contentContainer.Content = new RealizarVenda();
 
         }
     }

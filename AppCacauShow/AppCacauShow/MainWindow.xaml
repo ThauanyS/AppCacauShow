@@ -11,18 +11,9 @@
         WindowStartupLocation="CenterScreen"
         WindowStyle="ToolWindow">
     <Grid>
+
         <Grid Background="#FF131725" Height="NaN" Width="NaN">
-            <TextBox TextWrapping="Wrap" Text="" Margin="122,70,122,70"/>
-            <Button Content="Entrar" HorizontalAlignment="Left" Margin="605,464,0,0" VerticalAlignment="Top" Click="Button_Click" RenderTransformOrigin="3.909,3.799" Background="#FF131725" Width="200" Foreground="White" FontSize="25" Height="80" FontFamily="Arial"/>
-            <Label Content="Login" HorizontalAlignment="Left" Margin="455,356,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="25" FontWeight="Bold" RenderTransformOrigin="0.699,0.695"/>
-            <TextBox FontSize="20" HorizontalAlignment="Left" Margin="460,394,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="195" Height="45" RenderTransformOrigin="0.5,0.5" BorderBrush="#FF131725" SelectionBrush="{x:Null}" />
-            <Label Content="Senha" HorizontalAlignment="Left" Margin="769,356,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="25" FontWeight="Bold"/>
-            <TextBox FontSize="20" HorizontalAlignment="Left" Margin="765,394,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220" Height="45" RenderTransformOrigin="0.669,0.401" BorderBrush="#FF131725" SelectionBrush="{x:Null}" />
-            <TextBox HorizontalAlignment="Left" Margin="131,70,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="364" BorderBrush="{x:Null}" Foreground="{x:Null}" SelectionBrush="{x:Null}" Height="269" IsEnabled="False">
-                <TextBox.Background>
-                    <ImageBrush ImageSource="/Imagens/logoCacauShow.png" Stretch="Uniform"/>
-                </TextBox.Background>
-            </TextBox>
+            <Button Content="ENTRAR" Height="200" Margin="500,267,380,267" Click="Button_Click"/>
         </Grid>
         <ContentControl x:Name="contentContainer" />
 

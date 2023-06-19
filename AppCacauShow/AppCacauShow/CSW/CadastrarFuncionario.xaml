@@ -85,7 +85,7 @@
 
                         <!--// Home //-->
 
-                        <Button x:Name="Estoque1"   Background="{x:Null}" BorderBrush="{x:Null}" Click="Estoque_Click" Height="90"
+                        <Button x:Name="Estoque1"   Background="{x:Null}" BorderBrush="{x:Null}"  Height="90"
                                       >
 
                             <!--// Tooltip //-->
@@ -166,7 +166,7 @@
 
                         <!--Button Vendas-->
 
-                        <Button x:Name="Vendas1"  Background="{x:Null}" BorderBrush="{x:Null}" Click="Vendas_Click" Height="90"
+                        <Button x:Name="Vendas1"  Background="{x:Null}" BorderBrush="{x:Null}"  Height="90"
                                       >
 
                             <!--// Tooltip //-->
@@ -245,7 +245,7 @@
 
 
                         <!--// Button Compras //-->
-                        <Button x:Name="Compras1"  Background="{x:Null}" BorderBrush="{x:Null}" Height="90" Click="Compras_Click"
+                        <Button x:Name="Compras1"  Background="{x:Null}" BorderBrush="{x:Null}" Height="90" 
                                       >
 
                             <!--// Tooltip //-->
@@ -323,7 +323,7 @@
                         <Button x:Name="Funcionarios1"  
                             Background="{x:Null}" 
                             BorderBrush="{x:Null}"
-                            Height="90" Click="Funcionarios_Click">
+                            Height="90" >
 
 
                             <!--// Tooltip //-->
@@ -403,7 +403,7 @@
                         <Button x:Name="Caixa"  
                             Background="{x:Null}" 
                             BorderBrush="{x:Null}"
-                            Height="90" Click="Caixa_Click">
+                            Height="90" >
 
 
                             <!--// Tooltip //-->

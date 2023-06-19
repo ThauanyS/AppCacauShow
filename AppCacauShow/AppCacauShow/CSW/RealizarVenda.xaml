@@ -244,7 +244,7 @@
 
 
                         <!--// Button Compras //-->
-                        <Button x:Name="Compras"  Background="{x:Null}" BorderBrush="{x:Null}" Height="50" Click="Compras_Click"
+                        <Button x:Name="Compras"  Background="{x:Null}" BorderBrush="{x:Null}" Height="50"
                                       >
 
                             <!--// Tooltip //-->
@@ -322,7 +322,7 @@
                         <Button x:Name="Funcionarios"  
                         Background="{x:Null}" 
                         BorderBrush="{x:Null}"
-                        Height="49" Click="Funcionarios_Click">
+                        Height="49" >
 
 
                             <!--// Tooltip //-->
@@ -400,7 +400,7 @@
 
 
                         <!--// Button Sair //-->
-                        <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click" 
+                        <Button Background="{x:Null}" BorderBrush="{x:Null}"  
                                       >
 
                             <!--// Tooltip //-->
@@ -819,7 +819,7 @@
 
 
                         <!--// Button Compras //-->
-                        <Button x:Name="Compras1"  Background="{x:Null}" BorderBrush="{x:Null}" Height="90" Click="Compras_Click"
+                        <Button x:Name="Compras1"  Background="{x:Null}" BorderBrush="{x:Null}" Height="90" 
                                       >
 
                             <!--// Tooltip //-->
@@ -897,7 +897,7 @@
                         <Button x:Name="Funcionarios1"  
                             Background="{x:Null}" 
                             BorderBrush="{x:Null}"
-                            Height="90" Click="Funcionarios_Click">
+                            Height="90" >
 
 
                             <!--// Tooltip //-->
@@ -977,7 +977,7 @@
                         <Button x:Name="Caixa"  
                             Background="{x:Null}" 
                             BorderBrush="{x:Null}"
-                            Height="90" Click="Caixa_Click">
+                            Height="90" >
 
 
                             <!--// Tooltip //-->
@@ -1055,7 +1055,7 @@
 
 
                         <!--// Button Sair //-->
-                        <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click" Height="90" 
+                        <Button Background="{x:Null}" BorderBrush="{x:Null}"  Height="90" 
                                       >
 
                             <!--// Tooltip //-->

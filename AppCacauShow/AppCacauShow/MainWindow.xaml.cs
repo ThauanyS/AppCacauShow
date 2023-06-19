@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppCacauShow.CSW;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace AppCacauShow
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            contentContainer.Content = new RealizarVenda();
+
         }
     }
 }

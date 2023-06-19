@@ -166,7 +166,7 @@
 
                         <!--Button Vendas-->
 
-                        <Button x:Name="Vendas1"  Background="{x:Null}" BorderBrush="{x:Null}" Click="Vendas_Click" Height="90"
+                        <Button x:Name="Vendas1"  Background="{x:Null}" BorderBrush="{x:Null}"  Height="90"
                                       >
 
                             <!--// Tooltip //-->
@@ -245,7 +245,7 @@
 
 
                         <!--// Button Compras //-->
-                        <Button x:Name="Compras1"  Background="{x:Null}" BorderBrush="{x:Null}" Height="90" Click="Compras_Click"
+                        <Button x:Name="Compras1"  Background="{x:Null}" BorderBrush="{x:Null}" Height="90" 
                                       >
 
                             <!--// Tooltip //-->
@@ -481,7 +481,7 @@
 
 
                         <!--// Button Sair //-->
-                        <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click" Height="90" 
+                        <Button Background="{x:Null}" BorderBrush="{x:Null}"  Height="90" 
                                       >
 
                             <!--// Tooltip //-->
@@ -573,7 +573,7 @@
                 </Button.Background>
             </Button>
 
-            <Button x:Name="Produto"  HorizontalAlignment="Left" Margin="1045,84,0,0" VerticalAlignment="Top" Height="70" Width="110" BorderBrush="Black" Click="Produto_Click">
+            <Button x:Name="Produto"  HorizontalAlignment="Left" Margin="1045,84,0,0" VerticalAlignment="Top" Height="70" Width="110" BorderBrush="Black" >
                 <Image Source="/Imagens/adicionar-produto.png"></Image>
             </Button>
             <TextBox HorizontalAlignment="Left" Margin="145,99,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="770" Height="45"/>
