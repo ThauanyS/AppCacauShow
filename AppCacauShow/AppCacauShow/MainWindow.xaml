@@ -15,7 +15,6 @@
         <Grid Background="#FF131725" Height="NaN" Width="NaN">
             <Button Content="ENTRAR" Height="200" Margin="500,267,380,267" Click="Button_Click"/>
         </Grid>
-        <ContentControl x:Name="contentContainer" />
 
     </Grid>
 </Window>

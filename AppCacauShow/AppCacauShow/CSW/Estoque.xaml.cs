@@ -24,9 +24,10 @@ namespace AppCacauShow.CSW
             InitializeComponent();
         }
 
+
         private void Estoque_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void Funcionarios_Click(object sender, RoutedEventArgs e)
@@ -36,6 +37,12 @@ namespace AppCacauShow.CSW
 
         private void Caixa_Click(object sender, RoutedEventArgs e)
         {
+
+        }
+
+        private void Vendas1_Click(object sender, RoutedEventArgs e)
+        {
+           
 
         }
     }

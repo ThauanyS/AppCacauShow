@@ -8,7 +8,7 @@
         Title="Estoque" Height="750" 
         Width="1200"
         Topmost="True"
-        WindowStartupLocation="CenterScreen"
+     
         WindowStyle="ToolWindow">
 
 
@@ -53,6 +53,9 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
+        <ContentControl x:Name="contentControl">
+            <Frame x:Name="contentFrame" NavigationUIVisibility="Hidden"/>
+        </ContentControl>
 
         <!--// Background Color //-->
 
@@ -166,7 +169,7 @@
 
                         <!--Button Vendas-->
 
-                        <Button x:Name="Vendas1"  Background="{x:Null}" BorderBrush="{x:Null}"  Height="90"
+                        <Button x:Name="Vendas1"  Background="{x:Null}" BorderBrush="{x:Null}"  Height="90" Click="Vendas1_Click"
                                       >
 
                             <!--// Tooltip //-->

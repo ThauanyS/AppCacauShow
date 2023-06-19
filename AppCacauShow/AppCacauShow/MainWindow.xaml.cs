@@ -28,8 +28,9 @@ namespace AppCacauShow
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            contentContainer.Content = new RealizarVenda();
-
+            RealizarVenda vendaWindow = new RealizarVenda();
+            vendaWindow.Owner = this; // Define a janela principal como proprietária da janela de venda
+            vendaWindow.ShowDialog();
         }
     }
 }

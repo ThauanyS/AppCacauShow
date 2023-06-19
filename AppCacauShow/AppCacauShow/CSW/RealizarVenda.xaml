@@ -8,7 +8,7 @@
         Title="CadastrarVendas" Height="750" 
         Width="1200"
         Topmost="True"
-        WindowStartupLocation="CenterScreen"
+       
         WindowStyle="ToolWindow">
 
 
@@ -52,6 +52,10 @@
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
+<ContentControl x:Name="contentControl">
+    <Frame x:Name="contentFrame" NavigationUIVisibility="Hidden"/>
+</ContentControl>
+
         <Grid  Background="#FF131725" Grid.ColumnSpan="2" Margin="0,0,0,-5" Grid.RowSpan="3">
 
             <Label Content="Realizar Venda" Margin="470,9,440,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial                    " FontSize="40" Height="70" Width="NaN"/>
@@ -62,7 +66,6 @@
 
 
             </Label>
-            <ContentControl x:Name="contentContainer" />
 
             <Grid   x:Name="nav_pnl"
             HorizontalAlignment="Left"
@@ -1284,6 +1287,7 @@
             </Button>
 
         </Grid>
+        
     </Grid>
 
 </Window>
