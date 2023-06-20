@@ -28,5 +28,11 @@ namespace AppCacauShow.CSW
         {
 
         }
+
+        private void btnCadastroFunc(object sender, RoutedEventArgs e)
+        {
+            CadastrarFuncionario funcionario = new CadastrarFuncionario();
+            funcionario.ShowDialog();
+        }
     }
 }

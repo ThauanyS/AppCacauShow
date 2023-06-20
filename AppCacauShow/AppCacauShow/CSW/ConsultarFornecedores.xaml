@@ -566,7 +566,20 @@
             </Grid>
             <Label Content="Fornecedores" Margin="525,19,95,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="40" Height="70"/>
 
-            <DataGrid Margin="145,224,25,25" Width="NaN" Height="NaN"  />
+            <DataGrid x:Name="dgvFornecedores" Margin="145,224,25,25" Width="NaN" Height="NaN" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding id_for}" />
+                    <DataGridTextColumn Header="Nome" Binding="{Binding nome_for}" />
+                    <DataGridTextColumn Header="Email" Binding="{Binding email_for}" />
+                    <DataGridTextColumn Header="CNPJ" Binding="{Binding cnpj_for}" />
+                    <DataGridTextColumn Header="Telefone" Binding="{Binding telefone_for}" />
+                    <DataGridTextColumn Header="Endereço" Binding="{Binding endereco_for}" />
+                    <DataGridTextColumn Header="CEP" Binding="{Binding cep_for}" />
+                    <DataGridTextColumn Header="UF" Binding="{Binding uf_for}" />
+                    <DataGridTextColumn Header="Bairro" Binding="{Binding bairro_for}" />
+                    <DataGridTextColumn Header="Município" Binding="{Binding municipio_for}" />
+                </DataGrid.Columns>
+            </DataGrid>
             <Button  HorizontalAlignment="Left" Margin="925,94,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Height="50" Width="50" >
                 <Button.Background>
                     <ImageBrush ImageSource="/Imagens/lupa.png"/>

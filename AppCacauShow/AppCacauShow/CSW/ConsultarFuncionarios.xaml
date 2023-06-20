@@ -573,7 +573,7 @@
                 </Button.Background>
             </Button>
 
-            <Button x:Name="Produto"  HorizontalAlignment="Left" Margin="1045,84,0,0" VerticalAlignment="Top" Height="70" Width="110" BorderBrush="Black" >
+            <Button x:Name="Produto"  HorizontalAlignment="Left" Margin="1045,84,0,0" VerticalAlignment="Top" Height="70" Width="110" BorderBrush="Black" Click="btnCadastroFunc" >
                 <Image Source="/Imagens/cfunc.png" Width="110"></Image>
             </Button>
             <TextBox HorizontalAlignment="Left" Margin="145,99,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="770" Height="45"/>

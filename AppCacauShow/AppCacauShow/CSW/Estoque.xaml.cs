@@ -82,7 +82,8 @@ namespace AppCacauShow.CSW
 
         private void Funcionarios_Click(object sender, RoutedEventArgs e)
         {
-
+            ConsultarFuncionarios func = new ConsultarFuncionarios();
+            func.ShowDialog();
         }
 
         private void Caixa_Click(object sender, RoutedEventArgs e)
