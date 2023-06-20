@@ -820,7 +820,7 @@
 
 
                         <!--// Button Compras //-->
-                        <Button x:Name="Compras1"  Background="{x:Null}" BorderBrush="{x:Null}" Height="90" 
+                        <Button x:Name="Compras1"  Background="{x:Null}" BorderBrush="{x:Null}" Height="90" Click="Compras1_Click" 
                                       >
 
                             <!--// Tooltip //-->
@@ -898,7 +898,7 @@
                         <Button x:Name="Funcionarios1"  
                             Background="{x:Null}" 
                             BorderBrush="{x:Null}"
-                            Height="90" >
+                            Height="90" Click="Funcionarios1_Click" >
 
 
                             <!--// Tooltip //-->
@@ -978,7 +978,7 @@
                         <Button x:Name="Caixa"  
                             Background="{x:Null}" 
                             BorderBrush="{x:Null}"
-                            Height="90" >
+                            Height="90" Click="Caixa_Click" >
 
 
                             <!--// Tooltip //-->
@@ -1056,7 +1056,7 @@
 
 
                         <!--// Button Sair //-->
-                        <Button Background="{x:Null}" BorderBrush="{x:Null}"  Height="90" 
+                        <Button Background="{x:Null}" BorderBrush="{x:Null}"  Height="90" Click="Button_Click" 
                                       >
 
                             <!--// Tooltip //-->

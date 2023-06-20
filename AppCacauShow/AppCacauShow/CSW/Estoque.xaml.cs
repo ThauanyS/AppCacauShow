@@ -75,13 +75,17 @@ namespace AppCacauShow.CSW
 
         private void Estoque_Click(object sender, RoutedEventArgs e)
         {
-            
+            Estoque estoque = new Estoque();
+            estoque.Show();
+            this.Close();
         }
 
         private void Funcionarios_Click(object sender, RoutedEventArgs e)
         {
+
             ConsultarFuncionarios func = new ConsultarFuncionarios();
-            func.ShowDialog();
+            func.Show();
+            this.Close();
         }
 
         private void Caixa_Click(object sender, RoutedEventArgs e)
@@ -91,21 +95,31 @@ namespace AppCacauShow.CSW
 
         private void Vendas1_Click(object sender, RoutedEventArgs e)
         {
-           
+            RealizarVenda ven = new RealizarVenda();
+            ven.Show();
+            this.Close();
 
         }
 
         private void Produto_Click(object sender, RoutedEventArgs e)
         {
             CadastrarProdutos produtos = new CadastrarProdutos();
-            produtos.ShowDialog
-                ();
+            produtos.Show();
+            this.Close();
         }
 
         private void Compras1_Click(object sender, RoutedEventArgs e)
         {
-            CadastrarCompra cadastrarCompra = new CadastrarCompra();
-            cadastrarCompra.ShowDialog();
+            CadastrarCompra compra = new CadastrarCompra();
+            compra.Show();
+            this.Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
         }
     }
 }

@@ -44,17 +44,23 @@ namespace AppCacauShow.CSW
 
         private void Estoque_Click(object sender, RoutedEventArgs e)
         {
-
+            Estoque estoque = new Estoque();
+            estoque.Show();
+            this.Close();
         }
 
         private void Compras_Click(object sender, RoutedEventArgs e)
         {
-
+            CadastrarCompra compra = new CadastrarCompra();
+            compra.Show();
+            this.Close();
         }
 
         private void Funcionarios_Click(object sender, RoutedEventArgs e)
         {
-
+            ConsultarFuncionarios func = new ConsultarFuncionarios();
+            func.Show();
+            this.Close();
         }
 
         private void btnSalvar_Click(object sender, RoutedEventArgs e)
@@ -92,6 +98,20 @@ namespace AppCacauShow.CSW
             {
                 MessageBox.Show("Ocorreu um erro ao salvar os dados: " + ex.Message);
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
+        }
+
+        private void Vendas1_Click(object sender, RoutedEventArgs e)
+        {
+            RealizarVenda ven = new RealizarVenda();
+            ven.Show();
+            this.Close();
         }
     }
 }

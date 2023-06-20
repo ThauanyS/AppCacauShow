@@ -27,14 +27,44 @@ namespace AppCacauShow.CSW
        
         private void Estoque_Click(object sender, RoutedEventArgs e)
         {
-            Estoque estoqueWindow = new Estoque();
+            Estoque estoque = new Estoque();
+            estoque.Show();
+            this.Close();
         }
 
         private void Vendas_Click(object sender, RoutedEventArgs e)
         {
-            RealizarVenda realizarVenda = new RealizarVenda();
+            RealizarVenda ven = new RealizarVenda();
+            ven.Show();
+            this.Close();
         }
 
-    
+        private void Compras1_Click(object sender, RoutedEventArgs e)
+        {
+            CadastrarCompra compra = new CadastrarCompra();
+            compra.Show();
+            this.Close();
+
+        }
+
+        private void Funcionarios1_Click(object sender, RoutedEventArgs e)
+        {
+            ConsultarFuncionarios func = new ConsultarFuncionarios();
+            func.Show();
+            this.Close();
+
+        }
+
+        private void Caixa_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
+        }
     }
 }

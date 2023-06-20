@@ -13,7 +13,26 @@
     <Grid>
 
         <Grid Background="#FF131725" Height="NaN" Width="NaN">
-            <Button Content="ENTRAR" Height="200" Margin="500,267,380,267" Click="Button_Click"/>
+            <TextBox TextWrapping="Wrap" Text="" Margin="70,70,70,70">
+                <UIElement.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </UIElement.RenderTransform>
+            </TextBox>
+            <Button x:Name="login" Content="Entrar" HorizontalAlignment="Left" Margin="480,519,0,0" VerticalAlignment="Top" Click="Button_Click" RenderTransformOrigin="3.909,3.799" Background="#FF131725" Width="200" Foreground="White" FontSize="25" Height="80" FontFamily="Arial"/>
+            <Label Content="Login" HorizontalAlignment="Left" Margin="284,374,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="25" FontWeight="Bold" RenderTransformOrigin="0.699,0.695"/>
+            <TextBox FontSize="20" HorizontalAlignment="Left" Margin="290,414,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="195" Height="45" RenderTransformOrigin="0.5,0.5" BorderBrush="#FF131725" SelectionBrush="{x:Null}" />
+            <Label Content="Senha" HorizontalAlignment="Left" Margin="700,376,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="25" FontWeight="Bold"/>
+            <TextBox FontSize="20" HorizontalAlignment="Left" Margin="710,414,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220" Height="45" RenderTransformOrigin="0.669,0.401" BorderBrush="#FF131725" SelectionBrush="{x:Null}" />
+            <TextBox HorizontalAlignment="Left" Margin="400,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="364" BorderBrush="{x:Null}" Foreground="{x:Null}" SelectionBrush="{x:Null}" Height="269" IsEnabled="False">
+                <TextBox.Background>
+                    <ImageBrush ImageSource="/Imagens/logoCacauShow.png" Stretch="Uniform"/>
+                </TextBox.Background>
+            </TextBox>
         </Grid>
 
     </Grid>

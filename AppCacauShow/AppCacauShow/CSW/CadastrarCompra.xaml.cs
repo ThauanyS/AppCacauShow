@@ -24,7 +24,6 @@ namespace AppCacauShow.CSW
     {
         private MySqlConnection conexao;
 
-        private MySqlCommand comando;
         public CadastrarCompra()
         {
             InitializeComponent();
@@ -125,6 +124,41 @@ namespace AppCacauShow.CSW
         {
             ConsultarFornecedores fornecedores =    new ConsultarFornecedores();
             fornecedores.ShowDialog();
+        }
+
+        private void Estoque1_Click(object sender, RoutedEventArgs e)
+        {
+            Estoque estoque = new Estoque();
+            estoque.Show();
+            this.Close();
+        }
+
+        private void Vendas1_Click(object sender, RoutedEventArgs e)
+        {
+            RealizarVenda ven = new RealizarVenda();
+            ven.Show();
+            this.Close();
+        }
+
+        private void Compras1_Click(object sender, RoutedEventArgs e)
+        {
+            CadastrarCompra compra = new CadastrarCompra();
+            compra.Show();
+            this.Close();
+        }
+
+        private void Funcionarios1_Click(object sender, RoutedEventArgs e)
+        {
+            ConsultarFuncionarios func = new ConsultarFuncionarios();
+            func.Show();
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
         }
     }
 }

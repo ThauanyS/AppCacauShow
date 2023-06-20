@@ -484,7 +484,7 @@
 
 
                         <!--// Button Sair //-->
-                        <Button Background="{x:Null}" BorderBrush="{x:Null}"  Height="90" 
+                        <Button Background="{x:Null}" BorderBrush="{x:Null}"  Height="90" Click="Button_Click" 
                                       >
 
                             <!--// Tooltip //-->
