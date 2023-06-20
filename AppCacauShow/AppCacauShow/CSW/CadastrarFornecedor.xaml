@@ -570,7 +570,7 @@
             <Label Content="Cnpj:" HorizontalAlignment="Left" Margin="739,114,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" RenderTransformOrigin="1.074,2.556"/>
             <Label Content="E-mail:" HorizontalAlignment="Left" Margin="136,229,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
             <Label Content="Contato:" HorizontalAlignment="Left" Margin="726,219,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" RenderTransformOrigin="1,0.417"/>
-            <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="140,269,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="520" Height="45"/>
+            <TextBox x:Name="txtEmail" HorizontalAlignment="Left" FontSize="25"  Margin="140,269,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="520" Height="45"/>
             <TextBox x:Name="txtContato" FontSize="25"  HorizontalAlignment="Left" Margin="730,264,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="430" Height="45" />
             <Label Content="Endereço:" HorizontalAlignment="Left" Margin="135,334,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" RenderTransformOrigin="0.932,0.533"/>
             <TextBox x:Name="txtEndereco" FontSize="25"  HorizontalAlignment="Left" Margin="140,379,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="680" Height="45" />
@@ -578,11 +578,11 @@
             <TextBox x:Name="txtCnpj" FontSize="25" HorizontalAlignment="Left" Margin="745,159,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="415" Height="45"/>
             <Label Content="CEP:" HorizontalAlignment="Left" Margin="862,339,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
             <TextBox x:Name="txtCep" HorizontalAlignment="Left" FontSize="25" Margin="865,379,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="295" Height="45" />
-            <Label Content="Bairro:" HorizontalAlignment="Left" Margin="134,451,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
-            <TextBox x:Name="txtBairro" HorizontalAlignment="Left" Margin="140,489,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="390" Height="45" />
+            <Label Content="Bairro:"  HorizontalAlignment="Left" Margin="134,451,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
+            <TextBox x:Name="txtBairro"  FontSize="25" HorizontalAlignment="Left" Margin="140,489,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="390" Height="45" />
             <Label Content="UF:" HorizontalAlignment="Left" Margin="585,451,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" RenderTransformOrigin="1.027,0.417"/>
             <Label Content="Cidade:" HorizontalAlignment="Left" Margin="888,451,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
-            <TextBox x:Name="txtUf" HorizontalAlignment="Left" Margin="590,489,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="265" Height="45" />
+            <TextBox x:Name="txtUf" FontSize="25"  HorizontalAlignment="Left" Margin="590,489,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="265" Height="45" />
             <TextBox x:Name="txtMunicipio" FontSize="25"  HorizontalAlignment="Left" Margin="895,489,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="265" Height="45" />
             <Button x:Name="btnSalvar" HorizontalAlignment="Left" Margin="1020,639,0,0" VerticalAlignment="Top" Height="75" Width="155" BorderBrush="Black" RenderTransformOrigin="0.667,-0.999" FontSize="35" Content="Salvar" Click="btnSalvar_Click"/>
 
