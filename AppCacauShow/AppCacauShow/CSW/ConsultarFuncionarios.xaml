@@ -566,7 +566,23 @@
             </Grid>
             <Label Content="Funcionários" Margin="525,19,95,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="40" Height="70"/>
 
-            <DataGrid Margin="145,224,25,25" Width="NaN" Height="NaN"  />
+            <DataGrid x:Name="dgvFuncionarios" Margin="145,224,25,25" Width="NaN" Height="NaN"  AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding id_fun}" />
+                    <DataGridTextColumn Header="Nome" Binding="{Binding nome_fun}" />
+                    <DataGridTextColumn Header="Data de Nascimento" Binding="{Binding data_nasc_fun}" />
+                    <DataGridTextColumn Header="RG" Binding="{Binding rg_fun}" />
+                    <DataGridTextColumn Header="CPF" Binding="{Binding cpf_fun}" />
+                    <DataGridTextColumn Header="Email" Binding="{Binding email_fun}" />
+                    <DataGridTextColumn Header="Função" Binding="{Binding funcao_fun}" />
+                    <DataGridTextColumn Header="Contato" Binding="{Binding contato_fun}" />
+                    <DataGridTextColumn Header="Endereço" Binding="{Binding endereco_fun}" />
+                    <DataGridTextColumn Header="CEP" Binding="{Binding cep_fun}" />
+                    <DataGridTextColumn Header="UF" Binding="{Binding uf_fun}" />
+                    <DataGridTextColumn Header="Bairro" Binding="{Binding bairro_fun}" />
+                    <DataGridTextColumn Header="Município" Binding="{Binding municipio_fun}" />
+                </DataGrid.Columns>
+            </DataGrid>
             <Button  HorizontalAlignment="Left" Margin="925,94,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Height="50" Width="50" >
                 <Button.Background>
                     <ImageBrush ImageSource="/Imagens/lupa.png"/>

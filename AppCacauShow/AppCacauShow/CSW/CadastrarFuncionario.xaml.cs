@@ -45,11 +45,11 @@ namespace AppCacauShow.CSW
          
         private void btnSalvar(object sender, RoutedEventArgs e)
         {
-           
+            try
+            {
                 string nome = txtNome.Text;
-            DateTime dataSelecionada = new DateTime(2023, 6, 19);
-            dtpDataNascimento.SelectedDate = dataSelecionada;
-            string rg = txtRG.Text;
+                DateTime dataNascimento = dtpDataNascimento.SelectedDate ?? DateTime.MinValue;
+                string rg = txtRG.Text;
                 string cpf = txtCPF.Text;
                 string email = txtEmail.Text;
                 string funcao = txtFuncao.Text;
@@ -60,11 +60,12 @@ namespace AppCacauShow.CSW
                 string bairro = txtBairro.Text;
                 string municipio = txtMunicipio.Text;
 
-                string query = "INSERT INTO Funcionario (nome_fun, data_nasc_fun, rg_fun, cpf_fun, email_fun, funcao_fun, contato_fun, endereco_fun, cep_fun, uf_fun, bairro_fun, municipio_fun) VALUES (@_nome, @_data_nasc, @_rg, @_cpf, @_email, @_funcao, @_contato, @_endereco, @_cep, @_uf, @_bairro, @_municipio)";
+                string query = "INSERT INTO Funcionario (nome_fun, data_nasc_fun, rg_fun, cpf_fun, email_fun, funcao_fun, contato_fun, endereco_fun, cep_fun, uf_fun, bairro_fun, municipio_fun) " +
+                               "VALUES (@_nome, @_data_nasc, @_rg, @_cpf, @_email, @_funcao, @_contato, @_endereco, @_cep, @_uf, @_bairro, @_municipio)";
                 comando.CommandText = query;
 
                 comando.Parameters.AddWithValue("@_nome", nome);
-                comando.Parameters.AddWithValue("@_data_nasc", dataSelecionada);
+                comando.Parameters.AddWithValue("@_data_nasc", dataNascimento);
                 comando.Parameters.AddWithValue("@_rg", rg);
                 comando.Parameters.AddWithValue("@_cpf", cpf);
                 comando.Parameters.AddWithValue("@_email", email);
@@ -79,7 +80,11 @@ namespace AppCacauShow.CSW
                 comando.ExecuteNonQuery();
 
                 MessageBox.Show("Dados salvos com sucesso!");
-           
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro ao salvar os dados: " + ex.Message);
+            }
 
         }
     }
