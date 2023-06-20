@@ -63,17 +63,17 @@
             <Label Content="Nome:" HorizontalAlignment="Left" Margin="157,121,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" RenderTransformOrigin="0.257,0.579"/>
             <Label Content="Valor Unit." HorizontalAlignment="Left" Margin="156,224,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
             <Label Content="Vencimento:" HorizontalAlignment="Left" Margin="814,224,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
-            <DatePicker FontSize="27" HorizontalAlignment="Left" Margin="825,264,0,0" VerticalAlignment="Top" Width="315"/>
+            <DatePicker x:Name="dtpVencimento" FontSize="27" HorizontalAlignment="Left" Margin="825,264,0,0" VerticalAlignment="Top" Width="315"/>
 
             <!--// Menu de navegação//-->
             <Label Content="Cód." HorizontalAlignment="Left" Margin="400,226,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
-            <TextBox BorderThickness="1" HorizontalAlignment="Left" Margin="160,159,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="980" Height="45" RenderTransformOrigin="0.5,0.5" FontSize="20" FontFamily="Arial" />
-            <TextBox FontSize="20" HorizontalAlignment="Left" Margin="165,374,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="975" Height="160" RenderTransformOrigin="0.5,0.5" />
+            <TextBox x:Name="txtNome" BorderThickness="1" HorizontalAlignment="Left" Margin="160,159,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="980" Height="45" RenderTransformOrigin="0.5,0.5" FontSize="20" FontFamily="Arial" />
+            <TextBox x:Name="txtDescricao" FontSize="20" HorizontalAlignment="Left" Margin="165,374,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="975" Height="160" RenderTransformOrigin="0.5,0.5" />
             <Label Content="Descrição:" HorizontalAlignment="Left" Margin="158,334,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
-            <TextBox BorderThickness="1" HorizontalAlignment="Left" Margin="405,264,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="360" Height="45" RenderTransformOrigin="0.5,0.5" FontSize="20" FontFamily="Arial" />
-            <TextBox BorderThickness="1" HorizontalAlignment="Left" Margin="160,264,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="170" Height="45" RenderTransformOrigin="0.5,0.5" FontSize="20" FontFamily="Arial" />
+            <TextBox x:Name="txtCodigo" BorderThickness="1" HorizontalAlignment="Left" Margin="405,264,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="360" Height="45" RenderTransformOrigin="0.5,0.5" FontSize="20" FontFamily="Arial" />
+            <TextBox x:Name="valorUnit" BorderThickness="1" HorizontalAlignment="Left" Margin="160,264,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="170" Height="45" RenderTransformOrigin="0.5,0.5" FontSize="20" FontFamily="Arial" />
             <Button HorizontalAlignment="Left" Margin="810,639,0,0" VerticalAlignment="Top" Height="75" Width="155" BorderBrush="Black" FontSize="35" Content="Cancelar" RenderTransformOrigin="0.667,-0.999"/>
-            <Button HorizontalAlignment="Left" Margin="1020,639,0,0" VerticalAlignment="Top" Height="75" Width="155" BorderBrush="Black" RenderTransformOrigin="0.667,-0.999" FontSize="35" Content="Salvar"/>
+            <Button x:Name="btnSalvar" HorizontalAlignment="Left" Margin="1020,639,0,0" VerticalAlignment="Top" Height="75" Width="155" BorderBrush="Black" RenderTransformOrigin="0.667,-0.999" FontSize="35" Content="Salvar" Click="btnSalvar_Click_1"/>
 
 
         </Grid>

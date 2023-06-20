@@ -571,12 +571,12 @@
 
             <DataGrid x:Name="dgvEstoque" Margin="145,224,25,25" Width="NaN" Height="NaN" AutoGenerateColumns="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID" Binding="{Binding ID}" />
-                    <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" />
-                    <DataGridTextColumn Header="Código" Binding="{Binding Codigo}" />
-                    <DataGridTextColumn Header="Data de Vencimento" Binding="{Binding DataVencimento}" />
-                    <DataGridTextColumn Header="Valor Unitário" Binding="{Binding ValorUnitario}" />
-                    <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}" />
+                    <DataGridTextColumn Header="ID" Binding="{Binding id_pro}" Width="0.2*"/>
+                    <DataGridTextColumn Header="Nome" Binding="{Binding nome_pro}" Width="0.8*" />
+                    <DataGridTextColumn Header="Código" Binding="{Binding codigo_pro}" Width="0.5*" />
+                    <DataGridTextColumn Header="Data de Vencimento" Binding="{Binding data_venc_pro}" Width="0.5*" />
+                    <DataGridTextColumn Header="Valor Unitário" Binding="{Binding valor_unit_pro}" Width="0.4*" />
+                    <DataGridTextColumn Header="Descrição" Binding="{Binding descricao_pro}" Width="1*"/>
                 </DataGrid.Columns>
             </DataGrid>
             <Button  HorizontalAlignment="Left" Margin="925,94,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Height="50" Width="50" >

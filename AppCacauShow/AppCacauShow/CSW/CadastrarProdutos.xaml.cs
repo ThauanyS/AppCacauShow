@@ -61,5 +61,31 @@ namespace AppCacauShow.CSW
             Estoque estoque = new Estoque();
             estoque.ShowDialog();
         }
+
+        private void btnSalvar_Click_1(object sender, RoutedEventArgs e)
+        {
+
+                    var nome = txtNome.Text;
+                    var valorU = valorUnit.Text;
+                    DateTime dataSelecionada = new DateTime(2023, 6, 19);
+                    dtpVencimento.SelectedDate = dataSelecionada;
+                    var codigo = txtCodigo.Text;
+                    var descricao = txtDescricao.Text;  
+
+
+                    string query = "INSERT INTO Produto (nome_pro, codigo_pro, data_venc_pro, valor_unit_pro, descricao_pro) VALUES (@_nome,  @_codigo, @_data_venc, @_valor_unit, @_descricao)";
+                    var comando = new MySqlCommand(query, conexao);
+
+                    comando.Parameters.AddWithValue("@_nome", nome);
+                    comando.Parameters.AddWithValue("@_valor_unit", valorU);
+                    comando.Parameters.AddWithValue("@_data_venc", dataSelecionada);
+                    comando.Parameters.AddWithValue("@_codigo", codigo);
+                    comando.Parameters.AddWithValue("@_descricao", descricao);
+
+                    comando.ExecuteNonQuery();
+
+                    MessageBox.Show("Dados salvos com sucesso!");
+          
+        }
     }
 }

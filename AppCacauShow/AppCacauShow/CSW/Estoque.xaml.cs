@@ -28,6 +28,7 @@ namespace AppCacauShow.CSW
 
         public Estoque()
         {
+            InitializeComponent();
             Conexao();
             CarregarDados();
             PersonalizarColunas();
@@ -47,8 +48,7 @@ namespace AppCacauShow.CSW
         private void CarregarDados()
         {
             
-                try
-                {
+           
                     Conexao();
                     string query = "Select * From Produto";
                     var comando = new MySqlCommand(query, conexao);
@@ -58,11 +58,7 @@ namespace AppCacauShow.CSW
 
                     adaptador.Fill(tabela);
                     dgvEstoque.ItemsSource = tabela.DefaultView;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Ocorreram erros ao listar as informações!\n" + ex.Message);
-                }
+             
          
 
           
