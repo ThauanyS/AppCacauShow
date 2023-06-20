@@ -35,7 +35,7 @@ namespace AppCacauShow.CSW
 
         private void Conexao()
         {
-            string conexaoString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3306";
+            string conexaoString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3360";
             conexao = new MySqlConnection(conexaoString);
             comando = conexao.CreateCommand();
 
@@ -68,8 +68,14 @@ namespace AppCacauShow.CSW
 
                     comando.ExecuteNonQuery();
 
-                    MessageBox.Show("Dados salvos com sucesso!");
-          
+            txtNome.Text = "";
+            valorUnit.Text = "";
+            dtpVencimento.SelectedDate = null;
+            txtCodigo.Text = "";
+            txtDescricao.Text = "";
+
+            MessageBox.Show("Dados salvos com sucesso!");
+
         }
 
         private void Estoque1_Click(object sender, RoutedEventArgs e)

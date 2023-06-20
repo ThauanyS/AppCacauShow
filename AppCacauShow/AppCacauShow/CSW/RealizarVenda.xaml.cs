@@ -66,5 +66,17 @@ namespace AppCacauShow.CSW
             main.Show();
             this.Close();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            ConsultarCliente cliente = new ConsultarCliente();
+            cliente.Show();
+            this.Close();
+        }
     }
 }

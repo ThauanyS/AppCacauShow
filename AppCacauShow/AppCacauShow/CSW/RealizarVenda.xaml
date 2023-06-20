@@ -1139,7 +1139,7 @@
 
 
             </Grid>
-            <Button HorizontalAlignment="Left" Margin="1015,639,0,0" VerticalAlignment="Top" Height="75" Width="155" BorderBrush="Black" RenderTransformOrigin="0.667,-0.999" FontSize="35" Content="Salvar"/>
+            <Button HorizontalAlignment="Left" Margin="1015,639,0,0" VerticalAlignment="Top" Height="75" Width="155" BorderBrush="Black" RenderTransformOrigin="0.667,-0.999" FontSize="35" Content="Salvar" Click="Button_Click_1"/>
             <Button  HorizontalAlignment="Left" Margin="1065,289,0,0" VerticalAlignment="Top" Height="65" Width="100" FontSize="35" BorderBrush="{x:Null}" RenderTransformOrigin="3.358,0.334" >
                 <Image Source="/Imagens/adicionar.png" Height="60" Width="86"/>
             </Button>
@@ -1279,7 +1279,7 @@
             <Button  HorizontalAlignment="Left" Margin="1050,459,0,0" VerticalAlignment="Top" Height="65" Width="135" FontSize="30" Content="Excluir" BorderBrush="{x:Null}" RenderTransformOrigin="3.358,0.334" >
 
             </Button>
-            <Button  HorizontalAlignment="Left" Margin="145,179,0,0" VerticalAlignment="Top" Height="70" Width="80" FontSize="35" BorderBrush="{x:Null}" RenderTransformOrigin="3.358,0.334" >
+            <Button  HorizontalAlignment="Left" Margin="145,179,0,0" VerticalAlignment="Top" Height="70" Width="80" FontSize="35" BorderBrush="{x:Null}" RenderTransformOrigin="3.358,0.334" Click="Button_Click_2" >
                 <Image Source="/Imagens/cliente.png" Height="65" Width="75"/>
 
             </Button>

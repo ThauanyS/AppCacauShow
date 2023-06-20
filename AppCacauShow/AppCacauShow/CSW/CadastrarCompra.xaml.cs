@@ -36,7 +36,7 @@ namespace AppCacauShow.CSW
 
         private List<string> ObterNomesClientes()
         {
-            string connectionString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3306";
+            string connectionString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3360";
 
             using (MySqlConnection conexao = new MySqlConnection(connectionString))
             {
@@ -60,7 +60,7 @@ namespace AppCacauShow.CSW
 
         private void Conexao()
         {
-            string conexaoString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3306";
+            string conexaoString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3360";
             conexao = new MySqlConnection(conexaoString);
 
             conexao.Open();
@@ -68,36 +68,6 @@ namespace AppCacauShow.CSW
 
 
 
-
-        private void Estoque_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Vendas_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Compras_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Funcionarios_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Caixa_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void btnSalvar_Click(object sender, RoutedEventArgs e)
         {
