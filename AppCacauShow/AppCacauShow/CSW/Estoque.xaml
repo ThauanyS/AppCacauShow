@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppCacauShow.CSW"
         mc:Ignorable="d"
-        Title="Estoque" Height="750" 
-        Width="1200"
+        Title="Estoque" Height="742" 
+        Width="1742"
         Topmost="True"
      
         WindowStyle="ToolWindow">

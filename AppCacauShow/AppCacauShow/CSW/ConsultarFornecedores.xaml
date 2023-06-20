@@ -577,7 +577,7 @@
                 <Image Source="/Imagens/fornec.png" Width="105" Height="60"></Image>
             </Button>
             <TextBox HorizontalAlignment="Left" Margin="145,99,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="770" Height="45"/>
-            <Button  HorizontalAlignment="Left" Margin="145,159,0,0" VerticalAlignment="Top" Height="60" Width="125" FontSize="30" Content="Excluir" BorderBrush="{x:Null}" RenderTransformOrigin="3.358,0.334" />
+            <Button  HorizontalAlignment="Left" Margin="145,159,0,0" VerticalAlignment="Top" Height="60" Width="125" FontSize="30" Content="Excluir" BorderBrush="{x:Null}" RenderTransformOrigin="3.358,0.334" Click="Button_Click" />
         </Grid>
 
 

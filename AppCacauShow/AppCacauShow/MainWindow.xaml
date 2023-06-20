@@ -13,7 +13,8 @@
     <Grid>
 
         <Grid Background="#FF131725" Height="NaN" Width="NaN">
-            <Button Content="ENTRAR" Height="200" Margin="500,267,380,267" Click="Button_Click"/>
+            <Button Content="ENTRAR" Margin="219,267,661,367" Click="Click_Entrar" FontSize="40"/>
+            <Button Content="CAIXA" Margin="674,267,206,367" Click="Click_Caixa" FontSize="40"/>
         </Grid>
 
     </Grid>

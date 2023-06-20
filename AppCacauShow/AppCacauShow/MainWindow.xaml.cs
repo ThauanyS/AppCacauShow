@@ -28,9 +28,21 @@ namespace AppCacauShow
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+           
+        }
+
+        private void Click_Entrar(object sender, RoutedEventArgs e)
+        {
             RealizarVenda vendaWindow = new RealizarVenda();
             vendaWindow.Owner = this; // Define a janela principal como proprietária da janela de venda
             vendaWindow.ShowDialog();
+        }
+
+        private void Click_Caixa(object sender, RoutedEventArgs e)
+        {
+            Caixa caixa = new Caixa();
+            caixa.Owner = this; // Define a janela principal como proprietária da janela de venda
+            caixa.ShowDialog();
         }
     }
 }

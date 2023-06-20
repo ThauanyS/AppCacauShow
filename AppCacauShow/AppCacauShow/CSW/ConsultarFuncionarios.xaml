@@ -50,13 +50,14 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="19*" />
+            <ColumnDefinition/>
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
         <!--// Background Color //-->
 
-        <Grid  Background="#FF131725" Grid.ColumnSpan="2" Margin="0,0,0,-5" Grid.RowSpan="3">
+        <Grid  Background="#FF131725" Grid.ColumnSpan="3" Margin="0,0,0,-5" Grid.RowSpan="3">
 
 
 
