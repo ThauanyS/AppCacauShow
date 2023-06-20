@@ -120,5 +120,11 @@ namespace AppCacauShow.CSW
         {
 
         }
+
+        private void CadastrarFornecedor1_Click(object sender, RoutedEventArgs e)
+        {
+            ConsultarFornecedores fornecedores =    new ConsultarFornecedores();
+            fornecedores.ShowDialog();
+        }
     }
 }

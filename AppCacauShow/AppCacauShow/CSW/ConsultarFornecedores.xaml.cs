@@ -79,7 +79,8 @@ namespace AppCacauShow.CSW
 
         private void btnCadasFor(object sender, RoutedEventArgs e)
         {
-
+            CadastrarFornecedor fornecedor =  new CadastrarFornecedor();
+            fornecedor.ShowDialog();
         }
     }
 }

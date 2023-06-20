@@ -851,7 +851,7 @@
             <Button  HorizontalAlignment="Left" Margin="1050,459,0,0" VerticalAlignment="Top" Height="65" Width="135" FontSize="30" Content="Excluir" BorderBrush="{x:Null}" RenderTransformOrigin="3.358,0.334" >
 
             </Button>
-            <Button x:Name="CadastrarFornecedor1"  HorizontalAlignment="Left" Margin="145,179,0,0" VerticalAlignment="Top" Height="70" Width="80" FontSize="35" BorderBrush="{x:Null}" RenderTransformOrigin="3.358,0.334"  >
+            <Button x:Name="CadastrarFornecedor1"  HorizontalAlignment="Left" Margin="145,179,0,0" VerticalAlignment="Top" Height="70" Width="80" FontSize="35" BorderBrush="{x:Null}" RenderTransformOrigin="3.358,0.334" Click="CadastrarFornecedor1_Click"  >
                 <Image x:Name="CadastrarFornecedor" Source="/Imagens/fornecedor.png" Height="65" Width="75"/>
 
             </Button>

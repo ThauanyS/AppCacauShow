@@ -47,8 +47,6 @@ namespace AppCacauShow.CSW
 
         private void CarregarDados()
         {
-            
-           
                     Conexao();
                     string query = "Select * From Produto";
                     var comando = new MySqlCommand(query, conexao);
