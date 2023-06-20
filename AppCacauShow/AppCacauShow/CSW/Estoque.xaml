@@ -8,7 +8,7 @@
         Title="Estoque" Height="750" 
         Width="1200"
         Topmost="True"
-     
+         WindowStartupLocation="CenterScreen"
         WindowStyle="ToolWindow">
 
 
@@ -569,14 +569,14 @@
             </Grid>
             <Label Content="Estoque" Margin="570,14,50,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="40" Height="70"/>
 
-            <DataGrid Margin="145,224,25,25" Width="NaN" Height="NaN"  />
+            <DataGrid x:Name="dgvEstoque" Margin="145,224,25,25" Width="NaN" Height="NaN"  />
             <Button  HorizontalAlignment="Left" Margin="925,94,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Height="50" Width="50" >
                 <Button.Background>
                     <ImageBrush ImageSource="/Imagens/lupa.png"/>
                 </Button.Background>
             </Button>
 
-            <Button x:Name="Produto"  HorizontalAlignment="Left" Margin="1045,84,0,0" VerticalAlignment="Top" Height="70" Width="110" BorderBrush="Black" >
+            <Button x:Name="Produto"  HorizontalAlignment="Left" Margin="1045,84,0,0" VerticalAlignment="Top" Height="70" Width="110" BorderBrush="Black" Click="Produto_Click" >
                 <Image Source="/Imagens/adicionar-produto.png"></Image>
             </Button>
             <TextBox HorizontalAlignment="Left" Margin="145,99,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="770" Height="45"/>

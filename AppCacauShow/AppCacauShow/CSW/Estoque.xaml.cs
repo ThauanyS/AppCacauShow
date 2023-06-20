@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,10 +21,46 @@ namespace AppCacauShow.CSW
     /// </summary>
     public partial class Estoque : Window
     {
+
+        private MySqlConnection conexao;
+
+        private MySqlCommand comando;
+
         public Estoque()
         {
             InitializeComponent();
+            Conexao();
+            CarregarDados();
         }
+
+
+        private void Conexao()
+        {
+            string conexaoString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3306";
+            conexao = new MySqlConnection(conexaoString);
+            comando = conexao.CreateCommand();
+
+            conexao.Open();
+
+        }
+
+        private void CarregarDados()
+        {
+                Conexao();
+                string query = "Select * From Produto";
+                var comando = new MySqlCommand(query, conexao);
+                var adaptador = new MySqlDataAdapter(comando);
+
+                DataTable tabela = new DataTable();
+
+                adaptador.Fill(tabela);
+                dgvEstoque.ItemsSource = tabela.DefaultView;            
+
+        }
+
+
+
+    
 
 
         private void Estoque_Click(object sender, RoutedEventArgs e)
@@ -44,6 +82,13 @@ namespace AppCacauShow.CSW
         {
            
 
+        }
+
+        private void Produto_Click(object sender, RoutedEventArgs e)
+        {
+            CadastrarProdutos produtos = new CadastrarProdutos();
+            produtos.ShowDialog
+                ();
         }
     }
 }

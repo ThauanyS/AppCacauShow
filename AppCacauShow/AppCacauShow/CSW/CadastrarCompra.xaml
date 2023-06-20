@@ -714,7 +714,7 @@
 
 
             </Grid>
-            <Button HorizontalAlignment="Left" Margin="1015,639,0,0" VerticalAlignment="Top" Height="75" Width="155" BorderBrush="Black" RenderTransformOrigin="0.667,-0.999" FontSize="35" Content="Salvar"/>
+            <Button x:Name="btnSalvar" HorizontalAlignment="Left" Margin="1015,639,0,0" VerticalAlignment="Top" Height="75" Width="155" BorderBrush="Black" RenderTransformOrigin="0.667,-0.999" FontSize="35" Content="Salvar" Click="btnSalvar_Click"/>
             <Button  HorizontalAlignment="Left" Margin="1065,289,0,0" VerticalAlignment="Top" Height="65" Width="100" FontSize="35" BorderBrush="{x:Null}" RenderTransformOrigin="3.358,0.334" >
                 <Image Source="/Imagens/adicionar.png" Height="60" Width="86"/>
             </Button>
@@ -855,7 +855,7 @@
                 <Image Source="/Imagens/fornecedor.png" Height="65" Width="75"/>
 
             </Button>
-            <DatePicker HorizontalAlignment="Left" Margin="142,109,0,0" FontSize="27" VerticalAlignment="Top" Height="45" Width="293"/>
+            <DatePicker x:Name="dtpData" HorizontalAlignment="Left" Margin="142,109,0,0" FontSize="27" VerticalAlignment="Top" Height="45" Width="293"/>
 
         </Grid>
     </Grid>
