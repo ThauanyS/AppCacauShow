@@ -28,9 +28,9 @@ namespace AppCacauShow
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Estoque vendaWindow = new Estoque();
-            vendaWindow.Owner = this; // Define a janela principal como proprietária da janela de venda
-            vendaWindow.ShowDialog();
+          RealizarVenda ven = new RealizarVenda();
+            ven.Show();
+            this.Close();
         }
     }
 }
