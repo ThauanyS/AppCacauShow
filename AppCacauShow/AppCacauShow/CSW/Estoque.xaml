@@ -569,7 +569,16 @@
             </Grid>
             <Label Content="Estoque" Margin="570,14,50,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="40" Height="70"/>
 
-            <DataGrid x:Name="dgvEstoque" Margin="145,224,25,25" Width="NaN" Height="NaN"  />
+            <DataGrid x:Name="dgvEstoque" Margin="145,224,25,25" Width="NaN" Height="NaN" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding ID}" />
+                    <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" />
+                    <DataGridTextColumn Header="Código" Binding="{Binding Codigo}" />
+                    <DataGridTextColumn Header="Data de Vencimento" Binding="{Binding DataVencimento}" />
+                    <DataGridTextColumn Header="Valor Unitário" Binding="{Binding ValorUnitario}" />
+                    <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}" />
+                </DataGrid.Columns>
+            </DataGrid>
             <Button  HorizontalAlignment="Left" Margin="925,94,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Height="50" Width="50" >
                 <Button.Background>
                     <ImageBrush ImageSource="/Imagens/lupa.png"/>

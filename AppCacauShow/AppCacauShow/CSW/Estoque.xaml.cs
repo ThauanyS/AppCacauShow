@@ -28,9 +28,9 @@ namespace AppCacauShow.CSW
 
         public Estoque()
         {
-            InitializeComponent();
             Conexao();
             CarregarDados();
+            PersonalizarColunas();
         }
 
 
@@ -46,21 +46,37 @@ namespace AppCacauShow.CSW
 
         private void CarregarDados()
         {
-                Conexao();
-                string query = "Select * From Produto";
-                var comando = new MySqlCommand(query, conexao);
-                var adaptador = new MySqlDataAdapter(comando);
+            
+                try
+                {
+                    Conexao();
+                    string query = "Select * From Produto";
+                    var comando = new MySqlCommand(query, conexao);
+                    var adaptador = new MySqlDataAdapter(comando);
 
-                DataTable tabela = new DataTable();
+                    DataTable tabela = new DataTable();
 
-                adaptador.Fill(tabela);
-                dgvEstoque.ItemsSource = tabela.DefaultView;            
+                    adaptador.Fill(tabela);
+                    dgvEstoque.ItemsSource = tabela.DefaultView;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocorreram erros ao listar as informações!\n" + ex.Message);
+                }
+         
 
+          
         }
 
-
-
-    
+        private void PersonalizarColunas()
+        {
+            dgvEstoque.Columns[0].Header = "ID";
+            dgvEstoque.Columns[1].Header = "Nome";
+            dgvEstoque.Columns[2].Header = "Código";
+            dgvEstoque.Columns[3].Header = "Data de Vencimento";
+            dgvEstoque.Columns[4].Header = "Valor Unitário";
+            dgvEstoque.Columns[5].Header = "Descrição";
+        }
 
 
         private void Estoque_Click(object sender, RoutedEventArgs e)
