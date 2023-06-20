@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,14 +21,73 @@ namespace AppCacauShow.CSW
     /// </summary>
     public partial class ConsultarFuncionarios : Window
     {
+        private MySqlConnection conexao;
+
+        private MySqlCommand comando;
         public ConsultarFuncionarios()
         {
             InitializeComponent();
+            Conexao();
+            CarregarDados();
+            PersonalizarColunas();
+        }
+
+
+        private void Conexao()
+        {
+            string conexaoString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3306";
+            conexao = new MySqlConnection(conexaoString);
+            comando = conexao.CreateCommand();
+
+            conexao.Open();
+
+        }
+
+        private void CarregarDados()
+        {
+
+
+            Conexao();
+            string query = "Select * From Funcionario";
+            var comando = new MySqlCommand(query, conexao);
+            var adaptador = new MySqlDataAdapter(comando);
+
+            DataTable tabela = new DataTable();
+
+            adaptador.Fill(tabela);
+            dgvFuncionarios.ItemsSource = tabela.DefaultView;
+
+
+
+
+        }
+
+        private void PersonalizarColunas()
+        {
+            dgvFuncionarios.Columns[0].Header = "ID";
+            dgvFuncionarios.Columns[1].Header = "Nome";
+            dgvFuncionarios.Columns[2].Header = "Data de Nascimento";
+            dgvFuncionarios.Columns[3].Header = "RG";
+            dgvFuncionarios.Columns[4].Header = "CPF";
+            dgvFuncionarios.Columns[5].Header = "Email";
+            dgvFuncionarios.Columns[6].Header = "Função";
+            dgvFuncionarios.Columns[7].Header = "Contato";
+            dgvFuncionarios.Columns[8].Header = "Endereço";
+            dgvFuncionarios.Columns[9].Header = "CEP";
+            dgvFuncionarios.Columns[10].Header = "UF";
+            dgvFuncionarios.Columns[11].Header = "Bairro";
+            dgvFuncionarios.Columns[12].Header = "Município";
         }
 
         private void Caixa_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void btnCadastroFunc(object sender, RoutedEventArgs e)
+        {
+            CadastrarFuncionario funcionario = new CadastrarFuncionario();
+            funcionario.ShowDialog();
         }
     }
 }

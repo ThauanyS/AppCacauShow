@@ -205,9 +205,9 @@
         </Button>
         <Grid  Background="#FF131725" Grid.ColumnSpan="2" Margin="0,0,0,-5" Grid.RowSpan="3">
 
-            <Label Content="Cadastrar Compra" Margin="455,19,400,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial                    " FontSize="40" Height="70" Width="NaN"/>
+            <Label Content="Cadastrar Compra" Margin="450,19,340,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial                    " FontSize="40" Height="70" Width="NaN"/>
             <Button HorizontalAlignment="Left" Margin="810,639,0,0" VerticalAlignment="Top" Height="75" Width="155" BorderBrush="Black" FontSize="35" Content="Cancelar" RenderTransformOrigin="0.667,-0.999"/>
-            <TextBox FontSize="20" HorizontalAlignment="Left" Margin="1025,204,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="140" Height="45" RenderTransformOrigin="0.5,0.5" />
+            <TextBox FontSize="30" HorizontalAlignment="Left" Margin="1025,204,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="140" Height="45" RenderTransformOrigin="0.5,0.5" />
             <Label Content="Data:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="140,66,0,0"  Width="277"/>
 
             <Grid   x:Name="nav_pnl1"
@@ -235,7 +235,7 @@
 
                         <!--// Home //-->
 
-                        <Button x:Name="Estoque1"   Background="{x:Null}" BorderBrush="{x:Null}" Click="Estoque_Click" Height="90"
+                        <Button x:Name="Estoque1"   Background="{x:Null}" BorderBrush="{x:Null}"  Height="90"
                                       >
 
                             <!--// Tooltip //-->
@@ -316,7 +316,7 @@
 
                         <!--Button Vendas-->
 
-                        <Button x:Name="Vendas1"  Background="{x:Null}" BorderBrush="{x:Null}" Click="Vendas_Click" Height="90"
+                        <Button x:Name="Vendas1"  Background="{x:Null}" BorderBrush="{x:Null}"  Height="90"
                                       >
 
                             <!--// Tooltip //-->
@@ -395,7 +395,7 @@
 
 
                         <!--// Button Compras //-->
-                        <Button x:Name="Compras1"  Background="{x:Null}" BorderBrush="{x:Null}" Height="90" Click="Compras_Click"
+                        <Button x:Name="Compras1"  Background="{x:Null}" BorderBrush="{x:Null}" Height="90" 
                                       >
 
                             <!--// Tooltip //-->
@@ -473,7 +473,7 @@
                         <Button x:Name="Funcionarios1"  
                             Background="{x:Null}" 
                             BorderBrush="{x:Null}"
-                            Height="90" Click="Funcionarios_Click">
+                            Height="90" >
 
 
                             <!--// Tooltip //-->
@@ -553,7 +553,7 @@
                         <Button x:Name="Caixa"  
                             Background="{x:Null}" 
                             BorderBrush="{x:Null}"
-                            Height="90" Click="Caixa_Click">
+                            Height="90">
 
 
                             <!--// Tooltip //-->
@@ -631,7 +631,7 @@
 
 
                         <!--// Button Sair //-->
-                        <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click" Height="90" 
+                        <Button Background="{x:Null}" BorderBrush="{x:Null}"  Height="90" 
                                       >
 
                             <!--// Tooltip //-->
@@ -714,8 +714,8 @@
 
 
             </Grid>
-            <Button HorizontalAlignment="Left" Margin="1015,639,0,0" VerticalAlignment="Top" Height="75" Width="155" BorderBrush="Black" RenderTransformOrigin="0.667,-0.999" FontSize="35" Content="Salvar"/>
-            <Button  HorizontalAlignment="Left" Margin="1065,289,0,0" VerticalAlignment="Top" Height="65" Width="100" FontSize="35" BorderBrush="{x:Null}" RenderTransformOrigin="3.358,0.334" >
+            <Button x:Name="btnSalvar" HorizontalAlignment="Left" Margin="1015,639,0,0" VerticalAlignment="Top" Height="75" Width="155" BorderBrush="Black" RenderTransformOrigin="0.667,-0.999" FontSize="35" Content="Salvar" Click="btnSalvar_Click"/>
+            <Button  HorizontalAlignment="Left" Margin="1065,289,0,0" VerticalAlignment="Top" Height="65" Width="100" FontSize="35" BorderBrush="{x:Null}" RenderTransformOrigin="3.358,0.334" Click="btnAdicionar_Click" >
                 <Image Source="/Imagens/adicionar.png" Height="60" Width="86"/>
             </Button>
             <Label Content="Parcela:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="25" Margin="887,166,0,0" RenderTransformOrigin="0.5,0.5" Width="107">
@@ -819,7 +819,7 @@
                 </Label.RenderTransform>
             </Label>
             <ComboBox HorizontalAlignment="Left" Margin="685,109,0,0" VerticalAlignment="Top" Width="480" Height="45"/>
-            <ComboBox HorizontalAlignment="Left" Margin="245,204,0,0" VerticalAlignment="Top" Width="350" Height="45"/>
+            <ComboBox Name="cmbFornecedor" FontSize="30" ItemsSource="{Binding Fornecedor}" HorizontalAlignment="Left" Margin="245,204,0,0" VerticalAlignment="Top" Width="350" Height="45" SelectionChanged="cmbFornecedor_SelectionChanged"/>
             <ComboBox HorizontalAlignment="Left" Margin="615,204,0,0" VerticalAlignment="Top" Width="255" Height="45" RenderTransformOrigin="0.5,0.5">
                 <ComboBox.RenderTransform>
                     <TransformGroup>
@@ -841,21 +841,21 @@
                     </TransformGroup>
                 </Label.RenderTransform>
             </Label>
-            <ComboBox HorizontalAlignment="Left" Margin="145,304,0,0" VerticalAlignment="Top" Width="470" Height="45"/>
-            <TextBox HorizontalAlignment="Left" Margin="640,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="45"/>
+            <ComboBox x:Name="cmbProduto" HorizontalAlignment="Left" Margin="145,304,0,0" VerticalAlignment="Top" Width="470" Height="45"/>
+            <TextBox x:Name="txtValorU" HorizontalAlignment="Left" Margin="640,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="45"/>
             <TextBox FontSize="20" HorizontalAlignment="Left" Margin="910,304,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="130" Height="45" RenderTransformOrigin="0.423,0.556" />
             <TextBox FontSize="20" HorizontalAlignment="Left" Margin="800,304,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="80" Height="45" RenderTransformOrigin="0.5,0.5" />
             <TextBox FontSize="20" HorizontalAlignment="Left" Margin="145,639,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="140" Height="45" RenderTransformOrigin="0.5,0.5" />
             <TextBox FontSize="20" HorizontalAlignment="Left" Margin="330,639,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="140" Height="45" RenderTransformOrigin="0.5,0.5" />
-            <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Height="NaN" Margin="145,364,160,135" Width="NaN"/>
+            <DataGrid x:Name="dgvProdutosVenda" d:ItemsSource="{d:SampleData ItemCount=5}" Height="NaN" Margin="145,364,160,135" Width="NaN"/>
             <Button  HorizontalAlignment="Left" Margin="1050,459,0,0" VerticalAlignment="Top" Height="65" Width="135" FontSize="30" Content="Excluir" BorderBrush="{x:Null}" RenderTransformOrigin="3.358,0.334" >
 
             </Button>
-            <Button  HorizontalAlignment="Left" Margin="145,179,0,0" VerticalAlignment="Top" Height="70" Width="80" FontSize="35" BorderBrush="{x:Null}" RenderTransformOrigin="3.358,0.334" >
-                <Image Source="/Imagens/fornecedor.png" Height="65" Width="75"/>
+            <Button x:Name="CadastrarFornecedor1"  HorizontalAlignment="Left" Margin="145,179,0,0" VerticalAlignment="Top" Height="70" Width="80" FontSize="35" BorderBrush="{x:Null}" RenderTransformOrigin="3.358,0.334"  >
+                <Image x:Name="CadastrarFornecedor" Source="/Imagens/fornecedor.png" Height="65" Width="75"/>
 
             </Button>
-            <DatePicker HorizontalAlignment="Left" Margin="142,109,0,0" FontSize="27" VerticalAlignment="Top" Height="45" Width="293"/>
+            <DatePicker x:Name="dtpData" HorizontalAlignment="Left" Margin="142,109,0,0" FontSize="27" VerticalAlignment="Top" Height="45" Width="293"/>
 
         </Grid>
     </Grid>

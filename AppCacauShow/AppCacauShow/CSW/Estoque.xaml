@@ -8,7 +8,7 @@
         Title="Estoque" Height="750" 
         Width="1200"
         Topmost="True"
-     
+         WindowStartupLocation="CenterScreen"
         WindowStyle="ToolWindow">
 
 
@@ -248,7 +248,7 @@
 
 
                         <!--// Button Compras //-->
-                        <Button x:Name="Compras1"  Background="{x:Null}" BorderBrush="{x:Null}" Height="90" 
+                        <Button x:Name="Compras1"  Background="{x:Null}" BorderBrush="{x:Null}" Height="90" Click="Compras1_Click" 
                                       >
 
                             <!--// Tooltip //-->
@@ -569,14 +569,23 @@
             </Grid>
             <Label Content="Estoque" Margin="570,14,50,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="40" Height="70"/>
 
-            <DataGrid Margin="145,224,25,25" Width="NaN" Height="NaN"  />
+            <DataGrid x:Name="dgvEstoque" Margin="145,224,25,25" Width="NaN" Height="NaN" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding id_pro}" Width="0.2*"/>
+                    <DataGridTextColumn Header="Nome" Binding="{Binding nome_pro}" Width="0.8*" />
+                    <DataGridTextColumn Header="Código" Binding="{Binding codigo_pro}" Width="0.5*" />
+                    <DataGridTextColumn Header="Data de Vencimento" Binding="{Binding data_venc_pro}" Width="0.5*" />
+                    <DataGridTextColumn Header="Valor Unitário" Binding="{Binding valor_unit_pro}" Width="0.4*" />
+                    <DataGridTextColumn Header="Descrição" Binding="{Binding descricao_pro}" Width="1*"/>
+                </DataGrid.Columns>
+            </DataGrid>
             <Button  HorizontalAlignment="Left" Margin="925,94,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Height="50" Width="50" >
                 <Button.Background>
                     <ImageBrush ImageSource="/Imagens/lupa.png"/>
                 </Button.Background>
             </Button>
 
-            <Button x:Name="Produto"  HorizontalAlignment="Left" Margin="1045,84,0,0" VerticalAlignment="Top" Height="70" Width="110" BorderBrush="Black" >
+            <Button x:Name="Produto"  HorizontalAlignment="Left" Margin="1045,84,0,0" VerticalAlignment="Top" Height="70" Width="110" BorderBrush="Black" Click="Produto_Click" >
                 <Image Source="/Imagens/adicionar-produto.png"></Image>
             </Button>
             <TextBox HorizontalAlignment="Left" Margin="145,99,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="770" Height="45"/>

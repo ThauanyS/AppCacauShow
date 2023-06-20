@@ -1,5 +1,8 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,10 +22,53 @@ namespace AppCacauShow.CSW
     /// </summary>
     public partial class CadastrarCompra : Window
     {
+        private MySqlConnection conexao;
+
+        private MySqlCommand comando;
         public CadastrarCompra()
         {
             InitializeComponent();
+            Conexao();
+            Fornecedor = new ObservableCollection<string>(ObterNomesClientes());
+            DataContext = this;
         }
+
+        public ObservableCollection<string> Fornecedor { get; set; }
+
+        private List<string> ObterNomesClientes()
+        {
+            string connectionString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3306";
+
+            using (MySqlConnection conexao = new MySqlConnection(connectionString))
+            {
+                string query = "SELECT nome_for FROM Fornecedor";
+                MySqlCommand comando = new MySqlCommand(query, conexao);
+
+                conexao.Open();
+                MySqlDataReader leitor = comando.ExecuteReader();
+
+                List<string> nomesClientes = new List<string>();
+
+                while (leitor.Read())
+                {
+                    string nomeCliente = leitor.GetString("nome_for");
+                    nomesClientes.Add(nomeCliente);
+                }
+
+                return nomesClientes;
+            }
+        }
+
+        private void Conexao()
+        {
+            string conexaoString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3306";
+            conexao = new MySqlConnection(conexaoString);
+
+            conexao.Open();
+        }
+
+
+
 
         private void Estoque_Click(object sender, RoutedEventArgs e)
         {
@@ -50,6 +96,27 @@ namespace AppCacauShow.CSW
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnSalvar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnForCadastro(object sender, RoutedEventArgs e)
+        {
+            ConsultarFornecedores fornecedor = new ConsultarFornecedores();
+            fornecedor.ShowDialog();
+        }
+
+        private void cmbFornecedor_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void btnAdicionar_Click(object sender, RoutedEventArgs e)
         {
 
         }
