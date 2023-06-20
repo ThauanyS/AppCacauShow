@@ -102,5 +102,11 @@ namespace AppCacauShow.CSW
             produtos.ShowDialog
                 ();
         }
+
+        private void Compras1_Click(object sender, RoutedEventArgs e)
+        {
+            CadastrarCompra cadastrarCompra = new CadastrarCompra();
+            cadastrarCompra.ShowDialog();
+        }
     }
 }

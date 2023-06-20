@@ -44,23 +44,7 @@ namespace AppCacauShow.CSW
         }
 
      
-        private void Vendas_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnSalvar_Click(object sender, RoutedEventArgs e)
-        {
-            
-
-          
-        }
-
-        private void Estoque1_Click(object sender, RoutedEventArgs e)
-        {
-            Estoque estoque = new Estoque();
-            estoque.ShowDialog();
-        }
+        
 
         private void btnSalvar_Click_1(object sender, RoutedEventArgs e)
         {

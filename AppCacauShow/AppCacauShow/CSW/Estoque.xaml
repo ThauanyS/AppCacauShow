@@ -248,7 +248,7 @@
 
 
                         <!--// Button Compras //-->
-                        <Button x:Name="Compras1"  Background="{x:Null}" BorderBrush="{x:Null}" Height="90" 
+                        <Button x:Name="Compras1"  Background="{x:Null}" BorderBrush="{x:Null}" Height="90" Click="Compras1_Click" 
                                       >
 
                             <!--// Tooltip //-->

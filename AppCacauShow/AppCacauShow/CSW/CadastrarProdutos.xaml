@@ -183,7 +183,7 @@
 
                     <!--Button Vendas-->
 
-                    <Button x:Name="Vendas1"  Background="{x:Null}" BorderBrush="{x:Null}" Click="Vendas_Click" Height="90"
+                    <Button x:Name="Vendas1"  Background="{x:Null}" BorderBrush="{x:Null}"  Height="90"
                                       >
 
                         <!--// Tooltip //-->
@@ -416,7 +416,7 @@
 
                     </Button>
 
-                    <Button x:Name="Caixa"  
+                    <Button x:Name="Caixa1"  
                         Background="{x:Null}" 
                         BorderBrush="{x:Null}"
                         Height="90" >
