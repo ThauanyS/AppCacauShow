@@ -81,6 +81,7 @@ namespace AppCacauShow.CSW
         {
             CadastrarFornecedor fornecedor =  new CadastrarFornecedor();
             fornecedor.ShowDialog();
+            this.Close();
         }
 
         private void Estoque1_Click(object sender, RoutedEventArgs e)
