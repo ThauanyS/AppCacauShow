@@ -57,9 +57,6 @@ namespace AppCacauShow.CSW
             adaptador.Fill(tabela);
             dgvListarCliente.ItemsSource = tabela.DefaultView;
 
-
-
-
         }
 
         private void PersonalizarColunas()

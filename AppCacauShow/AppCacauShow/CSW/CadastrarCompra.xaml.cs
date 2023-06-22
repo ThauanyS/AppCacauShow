@@ -28,15 +28,16 @@ namespace AppCacauShow.CSW
         {
             InitializeComponent();
             Conexao();
-            Fornecedor = new ObservableCollection<string>(ObterNomesClientes());
+            Fornecedor = new ObservableCollection<string>(ObterNomesFornecedores()); 
+            Funcionario = new ObservableCollection<string>(ObterNomesFunc());
             DataContext = this;
         }
 
         public ObservableCollection<string> Fornecedor { get; set; }
 
-        private List<string> ObterNomesClientes()
+        private List<string> ObterNomesFornecedores()
         {
-            string connectionString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3360";
+            string connectionString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3306";
 
             using (MySqlConnection conexao = new MySqlConnection(connectionString))
             {
@@ -46,18 +47,43 @@ namespace AppCacauShow.CSW
                 conexao.Open();
                 MySqlDataReader leitor = comando.ExecuteReader();
 
-                List<string> nomesClientes = new List<string>();
+                List<string> nomesForn = new List<string>();
 
                 while (leitor.Read())
                 {
-                    string nomeCliente = leitor.GetString("nome_for");
-                    nomesClientes.Add(nomeCliente);
+                    string nomeForne = leitor.GetString("nome_for");
+                    nomesForn.Add(nomeForne);
                 }
 
-                return nomesClientes;
+                return nomesForn;
             }
         }
 
+        public ObservableCollection<string> Funcionario { get; set; }
+
+        private List<string> ObterNomesFunc()
+        {
+            string connectionString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3306";
+
+            using (MySqlConnection conexao = new MySqlConnection(connectionString))
+            {
+                string query = "SELECT nome_fun FROM Funcionario";
+                MySqlCommand comando = new MySqlCommand(query, conexao);
+
+                conexao.Open();
+                MySqlDataReader leitor = comando.ExecuteReader();
+
+                List<string> nomesFun = new List<string>();
+
+                while (leitor.Read())
+                {
+                    string nomeFunc = leitor.GetString("nome_fun");
+                    nomesFun.Add(nomeFunc);
+                }
+
+                return nomesFun;
+            }
+        }
         private void Conexao()
         {
             string conexaoString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3306";
