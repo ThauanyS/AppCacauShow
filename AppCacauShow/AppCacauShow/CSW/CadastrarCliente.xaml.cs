@@ -33,7 +33,7 @@ namespace AppCacauShow.CSW
 
         private void Conexao()
         {
-            string conexaoString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3360";
+            string conexaoString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3306";
             conexao = new MySqlConnection(conexaoString);
             comando = conexao.CreateCommand();
 
@@ -74,6 +74,18 @@ namespace AppCacauShow.CSW
                 comando.Parameters.AddWithValue("@_municipio", municipio);
 
                 comando.ExecuteNonQuery();
+
+                txtNome.Text = "";
+                dtpDataNascimento.SelectedDate = null;
+                txtRG.Text = "";
+                txtCPF.Text = "";
+                txtEmail.Text = "";
+                txtContato.Text = "";
+                txtEndereco.Text = "";
+                txtCEP.Text = "";
+                txtUF.Text = "";
+                txtBairro.Text = "";
+                txtMunicipio.Text = "";
 
                 MessageBox.Show("Dados salvos com sucesso!");
             }
