@@ -35,7 +35,7 @@ namespace AppCacauShow.CSW
 
             private void Conexao()
             {
-                string conexaoString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3306";
+                string conexaoString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3360";
                 conexao = new MySqlConnection(conexaoString);
                 comando = conexao.CreateCommand();
 

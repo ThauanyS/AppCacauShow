@@ -37,7 +37,7 @@ namespace AppCacauShow.CSW
 
         private List<string> ObterNomesFornecedores()
         {
-            string connectionString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3306";
+            string connectionString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3360";
 
             using (MySqlConnection conexao = new MySqlConnection(connectionString))
             {
@@ -63,7 +63,7 @@ namespace AppCacauShow.CSW
 
         private List<string> ObterNomesFunc()
         {
-            string connectionString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3306";
+            string connectionString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3360";
 
             using (MySqlConnection conexao = new MySqlConnection(connectionString))
             {
@@ -86,7 +86,7 @@ namespace AppCacauShow.CSW
         }
         private void Conexao()
         {
-            string conexaoString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3306";
+            string conexaoString = "server=localhost;database=Soft_CacauShow;user=root;password=root;port=3360";
             conexao = new MySqlConnection(conexaoString);
 
             conexao.Open();
