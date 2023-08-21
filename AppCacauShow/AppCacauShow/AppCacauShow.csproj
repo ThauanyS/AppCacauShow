@@ -115,6 +115,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CSW\Caixa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CSW\ConsultarCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -157,6 +161,9 @@
     </Compile>
     <Compile Include="CSW\CadastrarProdutos.xaml.cs">
       <DependentUpon>CadastrarProdutos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSW\Caixa.xaml.cs">
+      <DependentUpon>Caixa.xaml</DependentUpon>
     </Compile>
     <Compile Include="CSW\ConsultarCliente.xaml.cs">
       <DependentUpon>ConsultarCliente.xaml</DependentUpon>
