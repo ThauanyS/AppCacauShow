@@ -57,13 +57,12 @@
             </Button>
 
 
-            <Grid   x:Name="nav_pnl1"
+            <Grid x:Name="nav_pnl2"
                 HorizontalAlignment="Left"
                 Width="100"
                 Background="#2E333A" Margin="0,0,0,5">
 
-                <StackPanel x:Name="st_pnl1" Margin="0,5,0,5">
-
+                <StackPanel x:Name="st_pnl2" Margin="0,5,0,5">
                     <!--// Icon Menu //-->
 
 
@@ -77,19 +76,19 @@
 
                     <!--// Stack panel with buttons //-->
 
-                    <StackPanel  x:Name="LV1"
+                    <StackPanel  x:Name="LV2"
                         Background="Transparent">
 
                         <!--// Home //-->
 
-                        <Button x:Name="Estoque1"   Background="{x:Null}" BorderBrush="{x:Null}"  Height="90" Click="Estoque1_Click"
+                        <Button x:Name="Estoque2"   Background="{x:Null}" BorderBrush="{x:Null}"  Height="90" Click="Estoque1_Click"
                                       >
 
                             <!--// Tooltip //-->
 
                             <Button.ToolTip>
 
-                                <ToolTip x:Name="tt_estoque1"
+                                <ToolTip x:Name="tt_estoque2"
                                     Content="Estoque"
                                     Style="{StaticResource tt_style}"/>
 
@@ -163,14 +162,14 @@
 
                         <!--Button Vendas-->
 
-                        <Button x:Name="Vendas1"  Background="{x:Null}" BorderBrush="{x:Null}" Height="90" Click="Vendas1_Click"
+                        <Button x:Name="Vendas2"  Background="{x:Null}" BorderBrush="{x:Null}" Height="90" Click="Vendas1_Click"
                                       >
 
                             <!--// Tooltip //-->
 
                             <Button.ToolTip>
 
-                                <ToolTip x:Name="tt_vendas1"
+                                <ToolTip x:Name="tt_vendas2"
                                     Content="Vendas"
                                     Style="{StaticResource tt_style}"/>
 
@@ -242,14 +241,14 @@
 
 
                         <!--// Button Compras //-->
-                        <Button x:Name="Compras1"  Background="{x:Null}" BorderBrush="{x:Null}" Height="90" Click="Compras1_Click" 
+                        <Button x:Name="Compras2"  Background="{x:Null}" BorderBrush="{x:Null}" Height="90" Click="Compras1_Click" 
                                       >
 
                             <!--// Tooltip //-->
 
                             <Button.ToolTip>
 
-                                <ToolTip x:Name="tt_compras1"
+                                <ToolTip x:Name="tt_compras2"
                                     Content="Compras"
                                     Style="{StaticResource tt_style}"/>
 
@@ -317,7 +316,7 @@
                         </Button>
 
                         <!--Button Funcionários-->
-                        <Button x:Name="Funcionarios1"  
+                        <Button x:Name="Funcionarios2"  
                             Background="{x:Null}" 
                             BorderBrush="{x:Null}"
                             Height="90" Click="Funcionarios1_Click" >
@@ -327,7 +326,7 @@
 
                             <Button.ToolTip>
 
-                                <ToolTip x:Name="tt_funcionario1"
+                                <ToolTip x:Name="tt_funcionario2"
                                     Content="Funcionários"
                                     Style="{StaticResource tt_style}"/>
 
@@ -397,7 +396,7 @@
                         </Button>
 
                         <!--Button Caixa-->
-                        <Button x:Name="Caixa"  
+                        <Button x:Name="Caixa1"  
                             Background="{x:Null}" 
                             BorderBrush="{x:Null}"
                             Height="90">
@@ -407,7 +406,7 @@
 
                             <Button.ToolTip>
 
-                                <ToolTip x:Name="tt_Caixa"
+                                <ToolTip x:Name="tt_Caixa1"
                                     Content="Caixa"
                                     Style="{StaticResource tt_style}"/>
 
@@ -472,8 +471,6 @@
                             <Image Source="/Imagens/fluxo-de-caixa.png"
                                 Width="69" Height="64"/>
 
-
-
                         </Button>
 
 
@@ -485,7 +482,7 @@
 
                             <Button.ToolTip>
 
-                                <ToolTip x:Name="tt_sair1"
+                                <ToolTip x:Name="tt_sair2"
                                     Content="Sair"
                                     Style="{StaticResource tt_style}"/>
 

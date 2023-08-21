@@ -68,13 +68,13 @@ namespace AppCacauShow.CSW
 
                     comando.ExecuteNonQuery();
 
-            txtNome.Text = "";
-            valorUnit.Text = "";
-            dtpVencimento.SelectedDate = null;
-            txtCodigo.Text = "";
-            txtDescricao.Text = "";
+                    txtNome.Text = "";
+                    valorUnit.Text = "";
+                    dtpVencimento.SelectedDate = null;
+                    txtCodigo.Text = "";
+                    txtDescricao.Text = "";
 
-            MessageBox.Show("Dados salvos com sucesso!");
+                    MessageBox.Show("Dados salvos com sucesso!");
 
         }
 
